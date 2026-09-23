@@ -1,0 +1,34 @@
+/* ==========================================================================
+   THEME 69 & 70: RETRO (Y2K Desktop)
+   Y2K early-internet OS desktop aesthetic with Bubblegum Pink background (#FF85C2),
+   Window Yellow chrome (#FFD84D), dark borders (#1A0A2E), hard 4px unblurred shadows,
+   Press Start 2P display & Nunito body fonts.
+   ========================================================================== */
+
+[data-theme="Retro"],
+[data-theme="retro"] {
+  --bg-main: #FF85C2;
+  --bg-card: #FFF5DC;
+  --bg-badge: #FFD84D;
+  --badge-text-color: #1A0A2E;
+  --text-main: #1A0A2E;
+  --text-sub: #6B4C6B;
+  --color-primary: #FFD84D;
+  --color-primary-hover: #F7CB2D;
+  --color-secondary: #FF3D6B;
+  --color-accent: #C8A0FF;
+  --color-success: #59D98F;
+  --color-warning: #FFD84D;
+  --color-danger: #FF3D6B;
+  --border: 2px solid #1A0A2E;
+  --radius: 0px;
+  --box-shadow: 4px 4px 0px 0px #1A0A2E;
+  --box-shadow-hover: 6px 6px 0px 0px #1A0A2E;
+  --font-family: 'Nunito', sans-serif;
+  --font-display: 'Press Start 2P', cursive, monospace;
+  --font-mono: 'VT323', monospace;
+  --btn-text-color: #1A0A2E;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(200, 160, 255, 0.5);
+  --hover-transform: translate(-1px, -1px);
+}

@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 42: MONO
+   Hacker-chic monospace layout with Neon Green (#37F712), Cyan (#00A6F4) & Space Mono.
+   ========================================================================== */
+
+[data-theme="mono"] {
+  --bg-main: #E7E5E4;
+  --bg-card: #FFFFFF;
+  --bg-badge: #37F712;
+  --badge-text-color: #111827;
+  --text-main: #1C1917;
+  --text-sub: #78716B;
+  --color-primary: #37F712;
+  --color-primary-hover: #29CE09;
+  --color-secondary: #00A6F4;
+  --color-success: #00A63D;
+  --color-warning: #FE9900;
+  --color-danger: #FF2157;
+  --border: 2px solid #1C1917;
+  --radius: 6px;
+  --box-shadow: 3px 3px 0px #1C1917;
+  --box-shadow-hover: 5px 5px 0px #37F712;
+  --font-family: 'Space Mono', monospace;
+  --font-display: 'Space Mono', monospace;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #1C1917;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(55, 247, 18, 0.4);
+}

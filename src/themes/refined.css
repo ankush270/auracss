@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 53: REFINED
+   Sophisticated understated luxury with Playfair Display serif typography & soft offset shadows.
+   ========================================================================== */
+
+[data-theme="refined"] {
+  --bg-main: #FFFFFF;
+  --bg-card: #FAF9F6;
+  --bg-badge: #3B82F6;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #3B82F6;
+  --color-primary-hover: #1D4ED8;
+  --color-secondary: #8B5CF6;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #E5E7EB;
+  --radius: 8px;
+  --box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  --box-shadow-hover: 0 8px 24px rgba(59, 130, 246, 0.12);
+  --font-family: 'Playfair Display', Georgia, serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(59, 130, 246, 0.3);
+  --spacing-card: 1.75rem;
+}

@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 67: VIBRANT
+   Dynamic visual energy with Purple (#7C61D4), Warm Amber (#EAAE87) & Fascinate display font.
+   ========================================================================== */
+
+[data-theme="vibrant"] {
+  --bg-main: #FFFFFF;
+  --bg-card: #FAF8FE;
+  --bg-badge: #7C61D4;
+  --badge-text-color: #FFFFFF;
+  --text-main: #2F281D;
+  --text-sub: #5C5243;
+  --color-primary: #7C61D4;
+  --color-primary-hover: #6347BB;
+  --color-secondary: #EAAE87;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 2px solid #7C61D4;
+  --radius: 8px;
+  --box-shadow: 4px 4px 0px #EAAE87;
+  --box-shadow-hover: 6px 6px 0px #7C61D4;
+  --font-family: 'Noto Sans', sans-serif;
+  --font-display: 'Fascinate', cursive, display;
+  --font-mono: 'Fira Code', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(124, 97, 212, 0.4);
+}

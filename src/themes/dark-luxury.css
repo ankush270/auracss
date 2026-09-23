@@ -1,0 +1,32 @@
+/* ==========================================================================
+   THEME 19: DARK LUXURY
+   Near-black warm background (#0a0907), amber gold accent (#d4a03c), 
+   inset top-highlight card shadow & Inter font.
+   ========================================================================== */
+
+[data-theme="dark luxury"],
+[data-theme="dark-luxury"] {
+  --bg-main: #0a0907;
+  --bg-card: #161412;
+  --bg-badge: rgba(212, 160, 60, 0.15);
+  --badge-text-color: #d4a03c;
+  --text-main: #f0ebe0;
+  --text-sub: #8a8070;
+  --color-primary: #161412;
+  --color-primary-hover: #221f1c;
+  --color-secondary: #5a544a;
+  --color-success: #3d9e5c;
+  --color-warning: #d4a03c;
+  --color-danger: #b83c38;
+  --border: 1px solid rgba(212, 160, 60, 0.45);
+  --radius: 16px;
+  --box-shadow: inset 0 1px 0 rgba(255, 248, 230, 0.08), 0 4px 24px rgba(0, 0, 0, 0.45);
+  --box-shadow-hover: inset 0 1px 0 rgba(255, 248, 230, 0.12), 0 12px 40px rgba(212, 160, 60, 0.2);
+  --font-family: 'Inter', -apple-system, sans-serif;
+  --font-display: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #f0ebe0;
+  --btn-text-transform: none;
+  --focus-ring: rgba(212, 160, 60, 0.4);
+  --spacing-card: 2rem;
+}

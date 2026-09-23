@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 13: CODEX
+   OpenAI-inspired radically minimal blank-canvas interface driven by stark black structure.
+   ========================================================================== */
+
+[data-theme="codex"] {
+  --bg-main: #FFFFFF;
+  --bg-card: #F9FAFB;
+  --bg-badge: #000000;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #000000;
+  --color-primary-hover: #1F2937;
+  --color-secondary: #6B7280;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #111827;
+  --radius: 6px;
+  --box-shadow: none;
+  --box-shadow-hover: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --font-family: 'Open Sans', sans-serif;
+  --font-display: 'Open Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(0, 0, 0, 0.3);
+}

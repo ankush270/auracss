@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 20: DITHERED
+   Game-Boy / Retro dot-pattern visual style, Space Grotesk font & dashed borders.
+   ========================================================================== */
+
+[data-theme="dithered"] {
+  --bg-main: #F3F4F6;
+  --bg-card: #FFFFFF;
+  --bg-badge: #3B82F6;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #3B82F6;
+  --color-primary-hover: #1D4ED8;
+  --color-secondary: #8B5CF6;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 2px dashed #111827;
+  --radius: 4px;
+  --box-shadow: 4px 4px 0px #111827;
+  --box-shadow-hover: 6px 6px 0px #3B82F6;
+  --font-family: 'Open Sans', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(59, 130, 246, 0.3);
+}

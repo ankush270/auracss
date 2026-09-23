@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 41: MODERN
+   Contemporary editorial style with Deep Purple surface (#553F83) & IBM Plex Serif.
+   ========================================================================== */
+
+[data-theme="modern"] {
+  --bg-main: #553F83;
+  --bg-card: #45326C;
+  --bg-badge: #111111;
+  --text-main: #FFFFFF;
+  --text-sub: #D1C7E0;
+  --color-primary: #111111;
+  --color-primary-hover: #262626;
+  --color-secondary: #553F83;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid rgba(255, 255, 255, 0.2);
+  --radius: 8px;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  --box-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.4);
+  --font-family: 'IBM Plex Serif', Georgia, serif;
+  --font-display: 'IBM Plex Serif', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(255, 255, 255, 0.4);
+}

@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 10: CLAUDE
+   Research-journal aesthetic on warm stone (#FAF9F6) with near-black ink (#141413).
+   ========================================================================== */
+
+[data-theme="claude"] {
+  --bg-main: #FAF9F6;
+  --bg-card: #FFFFFF;
+  --bg-badge: #141413;
+  --text-main: #141413;
+  --text-sub: #525252;
+  --color-primary: #141413;
+  --color-primary-hover: #262624;
+  --color-secondary: #FAF9F6;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #E5E5E0;
+  --radius: 8px;
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --box-shadow-hover: 0 4px 12px rgba(20, 20, 19, 0.08);
+  --font-family: 'Anthropic Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Anthropic Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(20, 20, 19, 0.2);
+}

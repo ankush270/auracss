@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 37: LINGO
+   Playful gamified learning style (Duolingo-inspired) with Bright Green (#58CC02) & Nunito font.
+   ========================================================================== */
+
+[data-theme="lingo"] {
+  --bg-main: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-badge: #58CC02;
+  --badge-text-color: #FFFFFF;
+  --text-main: #3C3C3C;
+  --text-sub: #777777;
+  --color-primary: #58CC02;
+  --color-primary-hover: #46A302;
+  --color-secondary: #CE82FF;
+  --color-success: #58CC02;
+  --color-warning: #FFC800;
+  --color-danger: #FF4B4B;
+  --border: 2px solid #E5E5E5;
+  --radius: 16px;
+  --box-shadow: 0 4px 0px #E5E5E5;
+  --box-shadow-hover: 0 6px 0px #58CC02;
+  --font-family: 'Nunito', sans-serif;
+  --font-display: 'Nunito', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(88, 204, 2, 0.4);
+}

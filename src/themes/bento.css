@@ -1,0 +1,30 @@
+/* ==========================================================================
+   THEME 5: BENTO
+   Modular grid layout with warm peach surface, soft rounded containers & Inter font.
+   ========================================================================== */
+
+[data-theme="bento"] {
+  --bg-main: #FFF5E6;
+  --bg-card: #FFFFFF;
+  --bg-badge: #FAD4C0;
+  --badge-text-color: #111827;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #FAD4C0;
+  --color-primary-hover: #F8C3A8;
+  --color-secondary: #80A1C1;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #EAD7C5;
+  --radius: 16px;
+  --box-shadow: 0 4px 20px rgba(128, 161, 193, 0.12);
+  --box-shadow-hover: 0 8px 30px rgba(128, 161, 193, 0.22);
+  --font-family: 'Inter', system-ui, sans-serif;
+  --font-display: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #111827;
+  --btn-text-transform: none;
+  --focus-ring: rgba(250, 212, 192, 0.5);
+  --spacing-card: 1.75rem;
+}

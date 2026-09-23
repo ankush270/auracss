@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 56: SEGA
+   Arcade game style with Sega Blue (#4502FF), Yellow (#FFDA14) & VT323 pixel font.
+   ========================================================================== */
+
+[data-theme="sega"] {
+  --bg-main: #FFFFFF;
+  --bg-card: #FAF9FE;
+  --bg-badge: #4502FF;
+  --badge-text-color: #FFFFFF;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #4502FF;
+  --color-primary-hover: #3400D6;
+  --color-secondary: #FFDA14;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 2px solid #111827;
+  --radius: 0px;
+  --box-shadow: 4px 4px 0px #111827;
+  --box-shadow-hover: 6px 6px 0px #FFDA14;
+  --font-family: 'VT323', monospace;
+  --font-display: 'VT323', monospace;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(69, 2, 255, 0.4);
+}

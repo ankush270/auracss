@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 62: SQUARE
+   Refined minimal grid layout with Google Sans typography & sharp container lines.
+   ========================================================================== */
+
+[data-theme="square"] {
+  --bg-main: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-badge: #3B82F6;
+  --badge-text-color: #FFFFFF;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #3B82F6;
+  --color-primary-hover: #1D4ED8;
+  --color-secondary: #8B5CF6;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #E5E7EB;
+  --radius: 4px;
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --box-shadow-hover: 0 4px 12px rgba(59, 130, 246, 0.12);
+  --font-family: 'Google Sans', -apple-system, sans-serif;
+  --font-display: 'Google Sans', -apple-system, sans-serif;
+  --font-mono: 'Anonymous Pro', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(59, 130, 246, 0.25);
+}

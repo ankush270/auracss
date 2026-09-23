@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 48: PERSPECTIVE
+   Spatial depth layout with Emerald Mint (#00BD7D), Oswald display font & 3D card elevation.
+   ========================================================================== */
+
+[data-theme="perspective"] {
+  --bg-main: #F4FAF7;
+  --bg-card: #FFFFFF;
+  --bg-badge: #00BD7D;
+  --badge-text-color: #FFFFFF;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #00BD7D;
+  --color-primary-hover: #009864;
+  --color-secondary: #00BD7D;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #D1F2E7;
+  --radius: 12px;
+  --box-shadow: 0 10px 25px -5px rgba(0, 189, 125, 0.15), 0 8px 10px -6px rgba(0, 189, 125, 0.1);
+  --box-shadow-hover: 0 20px 35px -5px rgba(0, 189, 125, 0.25);
+  --font-family: 'Poppins', sans-serif;
+  --font-display: 'Oswald', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(0, 189, 125, 0.4);
+}

@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 39: MATRIX
+   Dark cyber-terminal (#0B0C14) with Terminal Green (#2DB58A) & Space Mono font.
+   ========================================================================== */
+
+[data-theme="matrix"] {
+  --bg-main: #0B0C14;
+  --bg-card: #141724;
+  --bg-badge: #2DB58A;
+  --badge-text-color: #0B0C14;
+  --text-main: #2DB58A;
+  --text-sub: #729688;
+  --color-primary: #2DB58A;
+  --color-primary-hover: #22936F;
+  --color-secondary: #0B0C14;
+  --color-success: #2DB58A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #2DB58A;
+  --radius: 4px;
+  --box-shadow: 0 0 10px rgba(45, 181, 138, 0.3);
+  --box-shadow-hover: 0 0 20px rgba(45, 181, 138, 0.6);
+  --font-family: 'Space Mono', monospace;
+  --font-display: 'Space Mono', monospace;
+  --font-mono: 'Space Mono', monospace;
+  --btn-text-color: #0B0C14;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(45, 181, 138, 0.5);
+}

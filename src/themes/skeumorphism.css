@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 59: SKEUMORPHISM
+   Physical real-world mimicry with Orange (#FA3C00), Germania One display & 3D textures.
+   ========================================================================== */
+
+[data-theme="skeumorphism"] {
+  --bg-main: #F4F4F6;
+  --bg-card: #FFFFFF;
+  --bg-badge: #FA3C00;
+  --badge-text-color: #FFFFFF;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #FA3C00;
+  --color-primary-hover: #D63300;
+  --color-secondary: #F08321;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #D1D5DB;
+  --radius: 8px;
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  --box-shadow-hover: 0 10px 15px -3px rgba(250, 60, 0, 0.25);
+  --font-family: 'Roboto', sans-serif;
+  --font-display: 'Germania One', cursive, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(250, 60, 0, 0.35);
+}

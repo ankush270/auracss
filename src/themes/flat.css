@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 28: FLAT
+   Pure 2D minimalist style with vibrant Coral/Orange (#F2673C), Inter font & zero shadow.
+   ========================================================================== */
+
+[data-theme="flat"] {
+  --bg-main: #FFFFFF;
+  --bg-card: #F9FAFB;
+  --bg-badge: #F2673C;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #F2673C;
+  --color-primary-hover: #D95329;
+  --color-secondary: #8B5CF6;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #E5E7EB;
+  --radius: 8px;
+  --box-shadow: none;
+  --box-shadow-hover: none;
+  --font-family: 'Inter', sans-serif;
+  --font-display: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(242, 103, 60, 0.3);
+  --hover-transform: none;
+}

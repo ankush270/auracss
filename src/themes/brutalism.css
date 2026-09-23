@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 7: BRUTALISM
+   Raw concrete-inspired aesthetic, Darker Grotesque font & terracotta accents.
+   ========================================================================== */
+
+[data-theme="brutalism"] {
+  --bg-main: #FFFFFF;
+  --bg-card: #F4F4F0;
+  --bg-badge: #DD614C;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #DD614C;
+  --color-primary-hover: #C24A37;
+  --color-secondary: #DAA144;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 3px solid #111827;
+  --radius: 0px;
+  --box-shadow: 4px 4px 0px #111827;
+  --box-shadow-hover: 6px 6px 0px #DD614C;
+  --font-family: 'Darker Grotesque', sans-serif;
+  --font-display: 'Darker Grotesque', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(221, 97, 76, 0.4);
+}

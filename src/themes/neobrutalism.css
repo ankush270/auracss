@@ -1,0 +1,33 @@
+/* ==========================================================================
+   THEME 43: NEOBRUTALISM
+   Handcrafted indie zine aesthetic with warm cream (#FAFADF), Coral CTA (#E8635A),
+   hard 4px offset shadows & 2px black strokes.
+   ========================================================================== */
+
+[data-theme="neobrutalism"] {
+  --bg-main: #FAFADF;
+  --bg-card: #FFFFFF;
+  --bg-badge: #E8635A;
+  --badge-text-color: #FFFFFF;
+  --text-main: #111111;
+  --text-sub: #555555;
+  --color-primary: #E8635A;
+  --color-primary-hover: #D24B42;
+  --color-secondary: #7B6CF6;
+  --color-accent: #4ECDC4;
+  --color-yellow: #FFE566;
+  --color-success: #4ECDC4;
+  --color-warning: #FFE566;
+  --color-danger: #E8635A;
+  --border: 2px solid #111111;
+  --radius: 12px;
+  --box-shadow: 4px 4px 0px 0px #111111;
+  --box-shadow-hover: 6px 6px 0px 0px #111111;
+  --font-family: 'DM Sans', -apple-system, sans-serif;
+  --font-display: 'DM Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(232, 99, 90, 0.5);
+  --hover-transform: translate(-2px, -2px);
+}

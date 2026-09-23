@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 3: ARTISTIC
+   High-contrast expressive style with Limelight display typography & vibrant blue accents.
+   ========================================================================== */
+
+[data-theme="artistic"] {
+  --bg-main: #FFFFFF;
+  --bg-card: #F9FAFB;
+  --bg-badge: #3B82F6;
+  --text-main: #111827;
+  --text-sub: #374151;
+  --color-primary: #3B82F6;
+  --color-primary-hover: #1D4ED8;
+  --color-secondary: #8B5CF6;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 2px solid #111827;
+  --radius: 8px;
+  --box-shadow: 4px 4px 0px #111827;
+  --box-shadow-hover: 6px 6px 0px #3B82F6;
+  --font-family: 'Limelight', cursive, sans-serif;
+  --font-display: 'Limelight', cursive, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(59, 130, 246, 0.35);
+}

@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 27: FICTION
+   Storybook-inspired warm surfaces (#FFE9CE), Cossette Texte display font & dark outlines.
+   ========================================================================== */
+
+[data-theme="fiction"] {
+  --bg-main: #FFFBF5;
+  --bg-card: #FFFFFF;
+  --bg-badge: #222222;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #222222;
+  --color-primary-hover: #3D3D3D;
+  --color-secondary: #FFE9CE;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 2px solid #222222;
+  --radius: 8px;
+  --box-shadow: 3px 3px 0px #FFE9CE, 5px 5px 0px #222222;
+  --box-shadow-hover: 6px 6px 0px #222222;
+  --font-family: 'Cossette Texte', Georgia, serif;
+  --font-display: 'Cossette Texte', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(34, 34, 34, 0.3);
+}

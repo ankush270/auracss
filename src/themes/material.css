@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 38: MATERIAL
+   Google Material Design 3 with Deep Purple (#6442D6), Lilac (#C8B3FD) & Roboto font.
+   ========================================================================== */
+
+[data-theme="material"] {
+  --bg-main: #FEF7FF;
+  --bg-card: #F7F2FA;
+  --bg-badge: #6442D6;
+  --text-main: #1D1B20;
+  --text-sub: #49454F;
+  --color-primary: #6442D6;
+  --color-primary-hover: #5031B5;
+  --color-secondary: #C8B3FD;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #E7E0EC;
+  --radius: 16px;
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --box-shadow-hover: 0 4px 12px rgba(100, 66, 214, 0.25);
+  --font-family: 'Inter', sans-serif;
+  --font-display: 'Roboto', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(100, 66, 214, 0.3);
+}

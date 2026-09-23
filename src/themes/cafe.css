@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 9: CAFE
+   Cozy cafe-inspired warm espresso brown (#5D4432) & soft cream surface (#F9F7F5).
+   ========================================================================== */
+
+[data-theme="cafe"] {
+  --bg-main: #F9F7F5;
+  --bg-card: #FFFFFF;
+  --bg-badge: #5D4432;
+  --text-main: #3E2B1E;
+  --text-sub: #6E5949;
+  --color-primary: #5D4432;
+  --color-primary-hover: #453224;
+  --color-secondary: #E9E3DD;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #E9E3DD;
+  --radius: 8px;
+  --box-shadow: 0 4px 12px rgba(93, 68, 50, 0.08);
+  --box-shadow-hover: 0 6px 18px rgba(93, 68, 50, 0.14);
+  --font-family: 'Poppins', sans-serif;
+  --font-display: 'Poppins', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(93, 68, 50, 0.25);
+  --spacing-card: 1.5rem;
+}

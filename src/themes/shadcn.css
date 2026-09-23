@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 57: SHADCN
+   Shadcn/ui-inspired monochrome utility-first design with Geist & Fira Code font.
+   ========================================================================== */
+
+[data-theme="shadcn"] {
+  --bg-main: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-badge: #000000;
+  --badge-text-color: #FFFFFF;
+  --text-main: #111827;
+  --text-sub: #6B7280;
+  --color-primary: #000000;
+  --color-primary-hover: #1F2937;
+  --color-secondary: #111111;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #E5E7EB;
+  --radius: 8px;
+  --box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --box-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --font-family: 'Geist', -apple-system, sans-serif;
+  --font-display: 'Geist', -apple-system, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(0, 0, 0, 0.25);
+}

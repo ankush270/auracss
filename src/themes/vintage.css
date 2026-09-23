@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 68: VINTAGE
+   1950s-1990s retro nostalgia with Teal (#008080), Silver (#C0C0C0) & Silkscreen pixel typography.
+   ========================================================================== */
+
+[data-theme="vintage"] {
+  --bg-main: #C0C0C0;
+  --bg-card: #FFFFFF;
+  --bg-badge: #008080;
+  --badge-text-color: #FFFFFF;
+  --text-main: #000000;
+  --text-sub: #444444;
+  --color-primary: #008080;
+  --color-primary-hover: #006666;
+  --color-secondary: #C0C0C0;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 2px solid #000000;
+  --radius: 0px;
+  --box-shadow: inset -2px -2px 0px #808080, inset 2px 2px 0px #FFFFFF, 3px 3px 0px #000000;
+  --box-shadow-hover: 4px 4px 0px #008080;
+  --font-family: 'Silkscreen', monospace;
+  --font-display: 'Silkscreen', monospace;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(0, 128, 128, 0.4);
+}

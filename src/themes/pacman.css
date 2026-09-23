@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 46: PACMAN
+   Retro arcade game aesthetic on black board (#000000) with Pixel font & dotted Arcade Blue borders (#2A3FE5).
+   ========================================================================== */
+
+[data-theme="pacman"] {
+  --bg-main: #000000;
+  --bg-card: #0A0A10;
+  --bg-badge: #2A3FE5;
+  --badge-text-color: #FFFFFF;
+  --text-main: #FFFF00;
+  --text-sub: #F4B9B0;
+  --color-primary: #2A3FE5;
+  --color-primary-hover: #1F30B8;
+  --color-secondary: #F4B9B0;
+  --color-success: #16A34A;
+  --color-warning: #FFFF00;
+  --color-danger: #FF0000;
+  --border: 2px dotted #2A3FE5;
+  --radius: 0px;
+  --box-shadow: 0 0 10px rgba(42, 63, 229, 0.4);
+  --box-shadow-hover: 0 0 20px rgba(255, 255, 0, 0.6);
+  --font-family: 'Press Start 2P', cursive, monospace;
+  --font-display: 'Press Start 2P', cursive, monospace;
+  --font-mono: 'Space Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(255, 255, 0, 0.5);
+}

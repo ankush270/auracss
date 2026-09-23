@@ -1,0 +1,113 @@
+/* ==========================================================================
+   UI-EXCHANGE THEME VAULT - BASE SEMANTIC COMPONENTS
+   Universal class definitions mapped to per-theme CSS Variables.
+   ========================================================================== */
+
+/* Root & Global Reset Baseline */
+body {
+  background-color: var(--bg-main, #ffffff);
+  color: var(--text-main, #111827);
+  font-family: var(--font-family, sans-serif);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+/* Base Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display, var(--font-family));
+  color: var(--text-main);
+  margin-top: 0;
+}
+
+/* Card Container */
+.theme-card {
+  background-color: var(--bg-card, #ffffff);
+  color: var(--text-main);
+  border: var(--border, 1px solid #e5e7eb);
+  border-radius: var(--radius, 8px);
+  box-shadow: var(--box-shadow, none);
+  padding: var(--spacing-card, 1.5rem);
+  transition: all 0.2s ease-in-out;
+}
+
+.theme-card:hover {
+  box-shadow: var(--box-shadow-hover, var(--box-shadow, none));
+}
+
+/* Button Component */
+.theme-btn {
+  background-color: var(--color-primary, #3b82f6);
+  color: var(--btn-text-color, #ffffff);
+  border: var(--border, none);
+  border-radius: var(--radius, 6px);
+  box-shadow: var(--box-shadow, none);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.65rem 1.35rem;
+  text-transform: var(--btn-text-transform, none);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.15s ease-in-out;
+}
+
+.theme-btn:hover {
+  background-color: var(--color-primary-hover, var(--color-primary));
+  opacity: var(--hover-opacity, 0.9);
+  transform: var(--hover-transform, translateY(-1px));
+}
+
+.theme-btn-secondary {
+  background-color: var(--color-secondary, #6b7280);
+  color: #ffffff;
+}
+
+/* Form Controls */
+.theme-input {
+  background-color: var(--bg-card, #ffffff);
+  color: var(--text-main);
+  border: var(--border, 1px solid #d1d5db);
+  border-radius: var(--radius, 6px);
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  padding: 0.65rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.theme-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--focus-ring, rgba(59, 130, 246, 0.3));
+}
+
+/* Badges & Tags */
+.theme-badge {
+  background-color: var(--bg-badge, var(--color-primary));
+  color: var(--badge-text-color, #ffffff);
+  border: var(--border, none);
+  border-radius: var(--radius, 9999px);
+  font-family: var(--font-mono, var(--font-family));
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Navigation Bar */
+.theme-nav {
+  background-color: var(--bg-card);
+  border-bottom: var(--border);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

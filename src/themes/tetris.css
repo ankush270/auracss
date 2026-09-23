@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 66: TETRIS
+   Block-game layout with Navy (#1C202B), Purple (#7107E7), Light Blue Surface (#DFE7FF) & Bangers font.
+   ========================================================================== */
+
+[data-theme="tetris"] {
+  --bg-main: #DFE7FF;
+  --bg-card: #FFFFFF;
+  --bg-badge: #7107E7;
+  --badge-text-color: #FFFFFF;
+  --text-main: #1C398E;
+  --text-sub: #3B539B;
+  --color-primary: #1C202B;
+  --color-primary-hover: #0F121B;
+  --color-secondary: #7107E7;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 3px solid #1C202B;
+  --radius: 8px;
+  --box-shadow: 4px 4px 0px #7107E7;
+  --box-shadow-hover: 6px 6px 0px #1C202B;
+  --font-family: 'Bangers', cursive, sans-serif;
+  --font-display: 'Bangers', cursive, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(113, 7, 231, 0.4);
+}

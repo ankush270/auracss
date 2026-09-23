@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 26: FANTASY
+   Game-inspired fantasy aesthetic with Royal Blue (#0250CC), Gold (#FDC800) & New Rocker font.
+   ========================================================================== */
+
+[data-theme="fantasy"] {
+  --bg-main: #FFFFFF;
+  --bg-card: #F8FAFC;
+  --bg-badge: #0250CC;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #0250CC;
+  --color-primary-hover: #013CA2;
+  --color-secondary: #FDC800;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 2px solid #FDC800;
+  --radius: 8px;
+  --box-shadow: 0 4px 14px rgba(2, 80, 204, 0.25);
+  --box-shadow-hover: 0 6px 20px rgba(253, 200, 0, 0.4);
+  --font-family: 'New Rocker', cursive, sans-serif;
+  --font-display: 'New Rocker', cursive, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(2, 80, 204, 0.4);
+}

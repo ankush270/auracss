@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 22: DRAMATIC
+   Theatrical dark-mode design (#09090B), Outfit heavy weight typography & rose/violet glows.
+   ========================================================================== */
+
+[data-theme="dramatic"] {
+  --bg-main: #09090B;
+  --bg-card: #18181B;
+  --bg-badge: #8B5CF6;
+  --text-main: #FAFAFA;
+  --text-sub: #A1A1AA;
+  --color-primary: #8B5CF6;
+  --color-primary-hover: #7C3AED;
+  --color-secondary: #F43F5E;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #27272A;
+  --radius: 8px;
+  --box-shadow: 0 0 20px rgba(139, 92, 246, 0.25), 0 0 40px rgba(244, 63, 94, 0.15);
+  --box-shadow-hover: 0 0 30px rgba(139, 92, 246, 0.45);
+  --font-family: 'Outfit', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(139, 92, 246, 0.4);
+}

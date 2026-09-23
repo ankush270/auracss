@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 36: LEVELS
+   Conversion-focused dark zinc (#27272A) & violet (#8B5CF6) with Inter typography.
+   ========================================================================== */
+
+[data-theme="levels"] {
+  --bg-main: #FAFAFA;
+  --bg-card: #FFFFFF;
+  --bg-badge: #27272A;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #27272A;
+  --color-primary-hover: #18181B;
+  --color-secondary: #8B5CF6;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #E5E7EB;
+  --radius: 8px;
+  --box-shadow: 0 4px 12px rgba(39, 39, 42, 0.1);
+  --box-shadow-hover: 0 8px 20px rgba(139, 92, 246, 0.2);
+  --font-family: 'Inter', sans-serif;
+  --font-display: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(39, 39, 42, 0.3);
+}

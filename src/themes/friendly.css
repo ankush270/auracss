@@ -1,0 +1,30 @@
+/* ==========================================================================
+   THEME 29: FRIENDLY
+   Approachable pastel Rose (#F2D9DC) & Sage (#D9F2D8) with Noto Serif Display typography.
+   ========================================================================== */
+
+[data-theme="friendly"] {
+  --bg-main: #FFFFFF;
+  --bg-card: #FAF6F7;
+  --bg-badge: #F2D9DC;
+  --badge-text-color: #111827;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #F2D9DC;
+  --color-primary-hover: #E4C0C5;
+  --color-secondary: #D9F2D8;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #EAD5D8;
+  --radius: 16px;
+  --box-shadow: 0 4px 16px rgba(242, 217, 220, 0.35);
+  --box-shadow-hover: 0 8px 24px rgba(242, 217, 220, 0.55);
+  --font-family: 'Noto Serif Display', Georgia, serif;
+  --font-display: 'Noto Serif Display', Georgia, serif;
+  --font-mono: 'Space Mono', monospace;
+  --btn-text-color: #111827;
+  --btn-text-transform: none;
+  --focus-ring: rgba(242, 217, 220, 0.5);
+  --spacing-card: 1.75rem;
+}

@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 54: RISO
+   Playful 2-color risograph print style with Hot Pink (#F237A1), Indigo Blue (#2C40A7) & Space Grotesk.
+   ========================================================================== */
+
+[data-theme="riso"] {
+  --bg-main: #FFFDF9;
+  --bg-card: #FFFFFF;
+  --bg-badge: #F237A1;
+  --badge-text-color: #FFFFFF;
+  --text-main: #111827;
+  --text-sub: #374151;
+  --color-primary: #F237A1;
+  --color-primary-hover: #D61B86;
+  --color-secondary: #2C40A7;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 2px solid #2C40A7;
+  --radius: 8px;
+  --box-shadow: 4px 4px 0px #2C40A7;
+  --box-shadow-hover: 6px 6px 0px #F237A1;
+  --font-family: 'Space Grotesk', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'Overpass Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(242, 55, 161, 0.4);
+}

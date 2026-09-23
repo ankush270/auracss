@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 4: BASIC
+   Print-inspired editorial language with purple accents & Oswald display headers.
+   ========================================================================== */
+
+[data-theme="basic"] {
+  --bg-main: #FFFFFF;
+  --bg-card: #FAF9F6;
+  --bg-badge: #A855F7;
+  --text-main: #0A1829;
+  --text-sub: #475569;
+  --color-primary: #A855F7;
+  --color-primary-hover: #9333EA;
+  --color-secondary: #0A1829;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #0A1829;
+  --radius: 4px;
+  --box-shadow: 2px 2px 0px #0A1829;
+  --box-shadow-hover: 4px 4px 0px #A855F7;
+  --font-family: 'Nunito', sans-serif;
+  --font-display: 'Oswald', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(168, 85, 247, 0.3);
+}

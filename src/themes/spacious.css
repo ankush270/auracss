@@ -1,0 +1,30 @@
+/* ==========================================================================
+   THEME 61: SPACIOUS
+   Breathing layouts with generous whitespace, Montserrat display & Open Sans body.
+   ========================================================================== */
+
+[data-theme="spacious"] {
+  --bg-main: #FFFFFF;
+  --bg-card: #FAFAFA;
+  --bg-badge: #3B82F6;
+  --badge-text-color: #FFFFFF;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #3B82F6;
+  --color-primary-hover: #1D4ED8;
+  --color-secondary: #8B5CF6;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #F0F0F0;
+  --radius: 8px;
+  --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  --box-shadow-hover: 0 6px 20px rgba(59, 130, 246, 0.1);
+  --font-family: 'Open Sans', sans-serif;
+  --font-display: 'Montserrat', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(59, 130, 246, 0.25);
+  --spacing-card: 2.25rem;
+}

@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 12: CLEAN
+   Pure whites, subtle grays, ample whitespace, Poppins headers & Roboto body.
+   ========================================================================== */
+
+[data-theme="clean"] {
+  --bg-main: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-badge: #3B82F6;
+  --text-main: #111827;
+  --text-sub: #6B7280;
+  --color-primary: #3B82F6;
+  --color-primary-hover: #1D4ED8;
+  --color-secondary: #8B5CF6;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #E5E7EB;
+  --radius: 8px;
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --box-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --font-family: 'Roboto', sans-serif;
+  --font-display: 'Poppins', sans-serif;
+  --font-mono: 'Inconsolata', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(59, 130, 246, 0.25);
+  --spacing-card: 2rem;
+}

@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 30: FUTURISTIC
+   Innovation-driven tech style, Audiowide display typography & electric blue accents.
+   ========================================================================== */
+
+[data-theme="futuristic"] {
+  --bg-main: #FAFAFC;
+  --bg-card: #FFFFFF;
+  --bg-badge: #3B82F6;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #3B82F6;
+  --color-primary-hover: #1D4ED8;
+  --color-secondary: #8B5CF6;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #DBEAFE;
+  --radius: 8px;
+  --box-shadow: 0 4px 16px rgba(59, 130, 246, 0.15);
+  --box-shadow-hover: 0 8px 25px rgba(59, 130, 246, 0.28);
+  --font-family: 'Roboto', sans-serif;
+  --font-display: 'Audiowide', cursive, sans-serif;
+  --font-mono: 'Anonymous Pro', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(59, 130, 246, 0.35);
+}

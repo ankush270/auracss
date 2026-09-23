@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 33: GRADIENT
+   Smooth color transitions with Deep Purple (#990FFA) & Electric Pink (#E60076).
+   ========================================================================== */
+
+[data-theme="gradient"] {
+  --bg-main: #FAFAFC;
+  --bg-card: #FFFFFF;
+  --bg-badge: linear-gradient(135deg, #990FFA 0%, #E60076 100%);
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #990FFA;
+  --color-primary-hover: #7D0BCF;
+  --color-secondary: #E60076;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid rgba(153, 15, 250, 0.3);
+  --radius: 12px;
+  --box-shadow: 0 4px 20px rgba(153, 15, 250, 0.2);
+  --box-shadow-hover: 0 8px 30px rgba(230, 0, 118, 0.35);
+  --font-family: 'Montserrat', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(153, 15, 250, 0.4);
+}

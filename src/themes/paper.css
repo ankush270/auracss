@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 47: PAPER
+   Paper-textured print-inspired surface (#FAF9F6) with Montserrat display & PT Mono labels.
+   ========================================================================== */
+
+[data-theme="paper"] {
+  --bg-main: #FAF9F6;
+  --bg-card: #FFFFFF;
+  --bg-badge: #111111;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #111111;
+  --color-primary-hover: #262626;
+  --color-secondary: #8B5CF6;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #E5E5E0;
+  --radius: 6px;
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --box-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --font-family: 'Roboto', sans-serif;
+  --font-display: 'Montserrat', sans-serif;
+  --font-mono: 'PT Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(17, 17, 17, 0.3);
+}

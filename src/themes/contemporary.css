@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 15: CONTEMPORARY
+   Neon magenta (#C800DF) & electric pink (#E60076) accents with Jost typography.
+   ========================================================================== */
+
+[data-theme="contemporary"] {
+  --bg-main: #FAFAFA;
+  --bg-card: #FFFFFF;
+  --bg-badge: #C800DF;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #C800DF;
+  --color-primary-hover: #A000B2;
+  --color-secondary: #E60076;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #E5E7EB;
+  --radius: 12px;
+  --box-shadow: 0 4px 16px rgba(200, 0, 223, 0.12);
+  --box-shadow-hover: 0 8px 24px rgba(230, 0, 118, 0.22);
+  --font-family: 'Jost', sans-serif;
+  --font-display: 'Jost', sans-serif;
+  --font-mono: 'Overpass Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(200, 0, 223, 0.35);
+}

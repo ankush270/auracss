@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 21: DOODLE
+   Hand-drawn sketch-like style with Delius Swash Caps handwritten font & imperfect borders.
+   ========================================================================== */
+
+[data-theme="doodle"] {
+  --bg-main: #FFFFFF;
+  --bg-card: #FAFDFE;
+  --bg-badge: #49B6E5;
+  --text-main: #111827;
+  --text-sub: #374151;
+  --color-primary: #49B6E5;
+  --color-primary-hover: #2DA1D4;
+  --color-secondary: #263D5B;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 2px solid #263D5B;
+  --radius: 12px;
+  --box-shadow: 3px 3px 0px #263D5B;
+  --box-shadow-hover: 5px 5px 0px #49B6E5;
+  --font-family: 'Delius Swash Caps', cursive, sans-serif;
+  --font-display: 'Delius Swash Caps', cursive, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(73, 182, 229, 0.4);
+}

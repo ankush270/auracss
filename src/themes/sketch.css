@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 58: SKETCH
+   Hand-drawn sketch look on paper with Soft Teal (#1DAD97) & Delicious Handrawn font.
+   ========================================================================== */
+
+[data-theme="sketch"] {
+  --bg-main: #FFFFFF;
+  --bg-card: #F4EDE0;
+  --bg-badge: #1DAD97;
+  --badge-text-color: #FFFFFF;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #1DAD97;
+  --color-primary-hover: #158A78;
+  --color-secondary: #F4EDE0;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 2px dashed #1DAD97;
+  --radius: 8px;
+  --box-shadow: 3px 3px 0px #1DAD97;
+  --box-shadow-hover: 5px 5px 0px #111827;
+  --font-family: 'Delicious Handrawn', cursive, sans-serif;
+  --font-display: 'Delicious Handrawn', cursive, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(29, 173, 151, 0.4);
+}

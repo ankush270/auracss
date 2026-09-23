@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 18: CREATIVE
+   Playful comic-style graphic theme, Bangers display typography & bold borders.
+   ========================================================================== */
+
+[data-theme="creative"] {
+  --bg-main: #FFFDF5;
+  --bg-card: #FFFFFF;
+  --bg-badge: #3B82F6;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #3B82F6;
+  --color-primary-hover: #1D4ED8;
+  --color-secondary: #8B5CF6;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 3px solid #111827;
+  --radius: 10px;
+  --box-shadow: 4px 4px 0px #3B82F6;
+  --box-shadow-hover: 6px 6px 0px #8B5CF6;
+  --font-family: 'Bangers', cursive, sans-serif;
+  --font-display: 'Bangers', cursive, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(59, 130, 246, 0.4);
+}

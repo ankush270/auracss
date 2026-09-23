@@ -1,0 +1,30 @@
+/* ==========================================================================
+   THEME 65: TERRACOTTA
+   Sun-baked clay-toned editorial system with Terracotta (#C56A3C), Warm Cream (#F3E9D8) & DM Serif Display.
+   ========================================================================== */
+
+[data-theme="terracotta"] {
+  --bg-main: #FAF6EE;
+  --bg-card: #FFFFFF;
+  --bg-badge: #C56A3C;
+  --badge-text-color: #FFFFFF;
+  --text-main: #2C1D16;
+  --text-sub: #61483C;
+  --color-primary: #C56A3C;
+  --color-primary-hover: #A75327;
+  --color-secondary: #F3E9D8;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #EAD8C7;
+  --radius: 8px;
+  --box-shadow: 0 4px 16px rgba(197, 106, 60, 0.12);
+  --box-shadow-hover: 0 8px 24px rgba(197, 106, 60, 0.22);
+  --font-family: 'DM Serif Display', Georgia, serif;
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(197, 106, 60, 0.35);
+  --spacing-card: 1.75rem;
+}

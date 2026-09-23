@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 25: EXPRESSIVE
+   Vibrant personality-driven pink (#db2777) & blue (#2563eb) with IBM Plex Mono font.
+   ========================================================================== */
+
+[data-theme="expressive"] {
+  --bg-main: #FFFFFF;
+  --bg-card: #FDF2F8;
+  --bg-badge: #DB2777;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #DB2777;
+  --color-primary-hover: #BE185D;
+  --color-secondary: #2563EB;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 2px solid #DB2777;
+  --radius: 8px;
+  --box-shadow: 4px 4px 0px #2563EB;
+  --box-shadow-hover: 6px 6px 0px #DB2777;
+  --font-family: 'IBM Plex Mono', monospace;
+  --font-display: 'IBM Plex Mono', monospace;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(219, 39, 119, 0.35);
+}

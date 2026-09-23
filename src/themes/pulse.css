@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 52: PULSE
+   Vibrant energy style on warm orange surface (#FFEDD5) with Orange accent (#EA580B) & Limelight font.
+   ========================================================================== */
+
+[data-theme="pulse"] {
+  --bg-main: #FFEDD5;
+  --bg-card: #FDBA74;
+  --bg-badge: #EA580B;
+  --badge-text-color: #FFFFFF;
+  --text-main: #EA580C;
+  --text-sub: #9A3412;
+  --color-primary: #EA580B;
+  --color-primary-hover: #C2410C;
+  --color-secondary: #F59E0B;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 2px solid #EA580C;
+  --radius: 8px;
+  --box-shadow: 4px 4px 0px #EA580C;
+  --box-shadow-hover: 6px 6px 0px #F59E0B;
+  --font-family: 'Limelight', cursive, sans-serif;
+  --font-display: 'Limelight', cursive, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(234, 88, 11, 0.4);
+}

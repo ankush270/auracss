@@ -1,0 +1,30 @@
+/* ==========================================================================
+   THEME 32: GLASSMORPHISM
+   Translucent frosted glass layers with backdrop blur, luminous border & Plus Jakarta Sans.
+   ========================================================================== */
+
+[data-theme="glassmorphism"] {
+  --bg-main: linear-gradient(135deg, #0F172A 0%, #1E1B4B 100%);
+  --bg-card: rgba(255, 255, 255, 0.08);
+  --bg-badge: #1856FF;
+  --text-main: #FFFFFF;
+  --text-sub: #CBD5E1;
+  --color-primary: #1856FF;
+  --color-primary-hover: #003CD9;
+  --color-secondary: #3A344E;
+  --color-success: #07CA6B;
+  --color-warning: #E89558;
+  --color-danger: #EA2143;
+  --border: 1px solid rgba(255, 255, 255, 0.2);
+  --radius: 16px;
+  --box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --box-shadow-hover: 0 12px 40px 0 rgba(24, 86, 255, 0.35);
+  --backdrop-filter: blur(16px);
+  --font-family: 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(24, 86, 255, 0.4);
+  --spacing-card: 1.75rem;
+}

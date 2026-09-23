@@ -1,0 +1,45 @@
+{
+  "name": "auracss-ui",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "AuraCSS - The ultimate 70-theme visual CSS vault for instant zero-config website styling.",
+  "main": "src/index.css",
+  "style": "src/index.css",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "files": [
+    "src",
+    "docs"
+  ],
+  "keywords": [
+    "auracss",
+    "css-themes",
+    "design-system",
+    "cyberpunk",
+    "brutalist",
+    "agentic",
+    "bento",
+    "glassmorphism",
+    "theme-vault",
+    "zero-config"
+  ],
+  "author": "UiExchange",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "lucide-react": "^1.47.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  }
+}

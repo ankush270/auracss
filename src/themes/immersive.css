@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 34: IMMERSIVE
+   Exhibit storytelling layout on a continuous Deep Emerald Green canvas (#00592B) & Cobalt Blue.
+   ========================================================================== */
+
+[data-theme="immersive"] {
+  --bg-main: #002914;
+  --bg-card: #00592B;
+  --bg-badge: #0023D1;
+  --text-main: #FFFFFF;
+  --text-sub: #A3E6C5;
+  --color-primary: #00592B;
+  --color-primary-hover: #00401F;
+  --color-secondary: #0023D1;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid rgba(163, 230, 197, 0.3);
+  --radius: 8px;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --box-shadow-hover: 0 8px 30px rgba(0, 35, 209, 0.4);
+  --font-family: 'Oswald', sans-serif;
+  --font-display: 'Oswald', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(0, 235, 115, 0.4);
+  --spacing-card: 1.75rem;
+}

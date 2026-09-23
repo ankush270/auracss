@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 14: COLORFUL
+   Vibrant saturated color blocks, gradient shadows & Inter typography.
+   ========================================================================== */
+
+[data-theme="colorful"] {
+  --bg-main: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-badge: #8B5CF6;
+  --text-main: #0F172A;
+  --text-sub: #475569;
+  --color-primary: #3B82F6;
+  --color-primary-hover: #2563EB;
+  --color-secondary: #8B5CF6;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+  --border: 2px solid #8B5CF6;
+  --radius: 12px;
+  --box-shadow: 0 4px 20px rgba(139, 92, 246, 0.2);
+  --box-shadow-hover: 0 8px 30px rgba(59, 130, 246, 0.35);
+  --font-family: 'Inter', sans-serif;
+  --font-display: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(139, 92, 246, 0.4);
+}

@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 1: AGENTIC
+   AI-first conversational interface with orange action accents, Playfair & Mono.
+   ========================================================================== */
+
+[data-theme="agentic"] {
+  --bg-main: #F6F6F1;
+  --bg-card: #FFFFFF;
+  --bg-badge: #FF5701;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #FF5701;
+  --color-primary-hover: #E04D00;
+  --color-secondary: #F6F6F1;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #E5E7EB;
+  --radius: 8px;
+  --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --box-shadow-hover: 0 10px 15px -3px rgba(255, 87, 1, 0.15);
+  --font-family: 'Playfair Display', Georgia, serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(255, 87, 1, 0.3);
+}

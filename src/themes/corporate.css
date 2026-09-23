@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 16: CORPORATE
+   Professional brand-aligned design with structured grids, Poppins & Open Sans.
+   ========================================================================== */
+
+[data-theme="corporate"] {
+  --bg-main: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-badge: #1E40AF;
+  --text-main: #1E293B;
+  --text-sub: #64748B;
+  --color-primary: #3B82F6;
+  --color-primary-hover: #1D4ED8;
+  --color-secondary: #8B5CF6;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #E2E8F0;
+  --radius: 6px;
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --box-shadow-hover: 0 4px 12px rgba(30, 64, 175, 0.1);
+  --font-family: 'Open Sans', sans-serif;
+  --font-display: 'Poppins', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(59, 130, 246, 0.25);
+  --spacing-card: 1.5rem;
+}

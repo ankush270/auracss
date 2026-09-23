@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 51: PROFESSIONAL
+   Business-ready design with Bright Gold/Yellow (#FECE14), Black (#000000) & Poppins.
+   ========================================================================== */
+
+[data-theme="professional"] {
+  --bg-main: #FFFFFF;
+  --bg-card: #FAFAFA;
+  --bg-badge: #FECE14;
+  --badge-text-color: #000000;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #FECE14;
+  --color-primary-hover: #E5B700;
+  --color-secondary: #000000;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 2px solid #000000;
+  --radius: 6px;
+  --box-shadow: 3px 3px 0px #000000;
+  --box-shadow-hover: 5px 5px 0px #FECE14;
+  --font-family: 'Poppins', sans-serif;
+  --font-display: 'Poppins', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --btn-text-color: #000000;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(254, 206, 20, 0.4);
+}

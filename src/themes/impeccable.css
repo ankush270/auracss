@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 35: IMPECCABLE
+   Graphic editorial-poster aesthetic with Sharp Amber (#CC8800) & Burnt Orange (#C55221).
+   ========================================================================== */
+
+[data-theme="impeccable"] {
+  --bg-main: #FFFDF9;
+  --bg-card: #FFFFFF;
+  --bg-badge: #CC8800;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #CC8800;
+  --color-primary-hover: #A36D00;
+  --color-secondary: #C55221;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 2px solid #C55221;
+  --radius: 6px;
+  --box-shadow: 4px 4px 0px #CC8800;
+  --box-shadow-hover: 6px 6px 0px #C55221;
+  --font-family: 'Chakra Petch', sans-serif;
+  --font-display: 'Chakra Petch', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(204, 136, 0, 0.4);
+}

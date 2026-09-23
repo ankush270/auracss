@@ -1,0 +1,30 @@
+/* ==========================================================================
+   THEME 45: NEUMORPHISM
+   Soft extruded 3D monochromatic surface (#E7E5E4) with double inset/outer light & dark drop shadows.
+   ========================================================================== */
+
+[data-theme="neumorphism"] {
+  --bg-main: #E7E5E4;
+  --bg-card: #E7E5E4;
+  --bg-badge: #006666;
+  --badge-text-color: #FFFFFF;
+  --text-main: #1E2938;
+  --text-sub: #57534E;
+  --color-primary: #006666;
+  --color-primary-hover: #004D4D;
+  --color-secondary: #F1F2F5;
+  --color-success: #00A63D;
+  --color-warning: #FE9900;
+  --color-danger: #FF2157;
+  --border: none;
+  --radius: 16px;
+  --box-shadow: 6px 6px 12px #c4c2c1, -6px -6px 12px #ffffff;
+  --box-shadow-hover: inset 4px 4px 8px #c4c2c1, inset -4px -4px 8px #ffffff;
+  --font-family: 'Space Mono', monospace;
+  --font-display: 'Space Mono', monospace;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(0, 102, 102, 0.35);
+  --spacing-card: 1.75rem;
+}

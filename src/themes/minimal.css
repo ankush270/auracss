@@ -1,0 +1,28 @@
+/* ==========================================================================
+   THEME 40: MINIMAL
+   Stripped-back essentialist layout on warm stone (#F4F4F1) with off-black typography (#0C0C09).
+   ========================================================================== */
+
+[data-theme="minimal"] {
+  --bg-main: #F4F4F1;
+  --bg-card: #FFFFFF;
+  --bg-badge: #0C0C09;
+  --text-main: #0C0C09;
+  --text-sub: #575752;
+  --color-primary: #0C0C09;
+  --color-primary-hover: #262622;
+  --color-secondary: #312C85;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 1px solid #E2E2DC;
+  --radius: 4px;
+  --box-shadow: none;
+  --box-shadow-hover: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --font-family: 'Open Sans', sans-serif;
+  --font-display: 'Inter', sans-serif;
+  --font-mono: 'Inconsolata', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(12, 12, 9, 0.3);
+}

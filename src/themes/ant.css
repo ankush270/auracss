@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 2: ANT
+   Enterprise data-dense design system with crisp blue accents & clean margins.
+   ========================================================================== */
+
+[data-theme="ant"] {
+  --bg-main: #FAFAFA;
+  --bg-card: #FFFFFF;
+  --bg-badge: #1677FF;
+  --text-main: #111827;
+  --text-sub: #6B7280;
+  --color-primary: #1677FF;
+  --color-primary-hover: #0958D9;
+  --color-secondary: #8B5CF6;
+  --color-success: #52C41A;
+  --color-warning: #FAAD14;
+  --color-danger: #FF4D4F;
+  --border: 1px solid #F0F0F0;
+  --radius: 6px;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --box-shadow-hover: 0 4px 12px rgba(22, 119, 255, 0.15);
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(22, 119, 255, 0.25);
+  --spacing-card: 1rem;
+}

@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 63: STITCH
+   Structured modular grid with Dark Teal (#072C2C), Vibrant Orange (#FF5F03) & Warm Surface (#EDEADE).
+   ========================================================================== */
+
+[data-theme="stitch"] {
+  --bg-main: #EDEADE;
+  --bg-card: #FFFFFF;
+  --bg-badge: #072C2C;
+  --badge-text-color: #FFFFFF;
+  --text-main: #111827;
+  --text-sub: #4B5563;
+  --color-primary: #072C2C;
+  --color-primary-hover: #041B1B;
+  --color-secondary: #FF5F03;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: 2px solid #072C2C;
+  --radius: 6px;
+  --box-shadow: 3px 3px 0px #FF5F03;
+  --box-shadow-hover: 5px 5px 0px #072C2C;
+  --font-family: 'Ubuntu', sans-serif;
+  --font-display: 'Oswald', sans-serif;
+  --font-mono: 'Ubuntu Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(7, 44, 44, 0.4);
+}

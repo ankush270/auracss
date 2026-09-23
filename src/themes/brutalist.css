@@ -1,0 +1,31 @@
+/* ==========================================================================
+   THEME 8: BRUTALIST (Neobrutalism)
+   High contrast primary pink/yellow/blue, thick 3px black strokes & hard unblurred shadows.
+   ========================================================================== */
+
+[data-theme="brutalist"] {
+  --bg-main: #F5F0E6;
+  --bg-card: #FFFFFF;
+  --bg-badge: #FF4081;
+  --badge-text-color: #FFFFFF;
+  --text-main: #000000;
+  --text-sub: #333333;
+  --color-primary: #FF4081;
+  --color-primary-hover: #E91E63;
+  --color-secondary: #2196F3;
+  --color-accent: #FFEB3B;
+  --color-success: #16A34A;
+  --color-warning: #FFEB3B;
+  --color-danger: #FF5252;
+  --border: 3px solid #000000;
+  --radius: 0px;
+  --box-shadow: 5px 5px 0px #000000;
+  --box-shadow-hover: 7px 7px 0px #000000;
+  --font-family: 'Space Grotesk', system-ui, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(255, 64, 129, 0.5);
+  --hover-transform: translate(-2px, -2px);
+}

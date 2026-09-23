@@ -1,0 +1,30 @@
+/* ==========================================================================
+   THEME 24: ENTERPRISE
+   Dark cloud-platform aesthetic (#09090b), IBM Plex Sans font & glass-like panels.
+   ========================================================================== */
+
+[data-theme="enterprise"] {
+  --bg-main: #09090B;
+  --bg-card: rgba(24, 24, 27, 0.75);
+  --bg-badge: #0C5CAB;
+  --text-main: #FAFAFA;
+  --text-sub: #A1A1AA;
+  --color-primary: #0C5CAB;
+  --color-primary-hover: #094989;
+  --color-secondary: #0A4A8A;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+  --border: 1px solid rgba(255, 255, 255, 0.12);
+  --radius: 8px;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --box-shadow-hover: 0 8px 30px rgba(12, 92, 171, 0.25);
+  --backdrop-filter: blur(16px);
+  --font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+  --font-display: 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Sans', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(12, 92, 171, 0.4);
+  --spacing-card: 1.5rem;
+}

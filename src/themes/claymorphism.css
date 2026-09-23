@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 11: CLAYMORPHISM
+   Puffy 3D clay-like rounded cards with double volumetric inner & outer soft shadows.
+   ========================================================================== */
+
+[data-theme="claymorphism"] {
+  --bg-main: #F0F4F8;
+  --bg-card: #FFFFFF;
+  --bg-badge: #3B82F6;
+  --text-main: #1C398E;
+  --text-sub: #475569;
+  --color-primary: #3B82F6;
+  --color-primary-hover: #2563EB;
+  --color-secondary: #8B5CF6;
+  --color-success: #16A34A;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+  --border: none;
+  --radius: 20px;
+  --box-shadow: inset -4px -4px 8px rgba(0, 0, 0, 0.05), inset 4px 4px 8px rgba(255, 255, 255, 0.9), 10px 10px 20px rgba(0, 0, 0, 0.08);
+  --box-shadow-hover: inset -4px -4px 8px rgba(0, 0, 0, 0.08), inset 4px 4px 8px rgba(255, 255, 255, 1), 14px 14px 28px rgba(59, 130, 246, 0.18);
+  --font-family: 'Montserrat', sans-serif;
+  --font-display: 'Poppins', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --btn-text-color: #FFFFFF;
+  --btn-text-transform: none;
+  --focus-ring: rgba(59, 130, 246, 0.35);
+  --spacing-card: 1.75rem;
+}

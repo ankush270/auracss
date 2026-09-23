@@ -1,0 +1,29 @@
+/* ==========================================================================
+   THEME 44: NEON
+   High-voltage electric Lime (#BBF351) & Cyan (#00BCFF) with STIX Two Text display font.
+   ========================================================================== */
+
+[data-theme="neon"] {
+  --bg-main: #0B0E14;
+  --bg-card: #141A26;
+  --bg-badge: #BBF351;
+  --badge-text-color: #0B0E14;
+  --text-main: #F3F4F6;
+  --text-sub: #9CA3AF;
+  --color-primary: #BBF351;
+  --color-primary-hover: #A3DD38;
+  --color-secondary: #00BCFF;
+  --color-success: #BBF351;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+  --border: 1px solid #BBF351;
+  --radius: 8px;
+  --box-shadow: 0 0 15px rgba(187, 243, 81, 0.35);
+  --box-shadow-hover: 0 0 25px rgba(0, 188, 255, 0.5);
+  --font-family: 'Roboto', sans-serif;
+  --font-display: 'STIX Two Text', serif;
+  --font-mono: 'Source Code Pro', monospace;
+  --btn-text-color: #0B0E14;
+  --btn-text-transform: uppercase;
+  --focus-ring: rgba(187, 243, 81, 0.5);
+}
