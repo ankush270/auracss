@@ -205,20 +205,54 @@ module.exports = {
                 className="p-4 rounded-xl border border-slate-200/50 shadow-sm transition-all"
               >
                 {activeTab === 'card' && (
-                  <div className="theme-card">
-                    <div className="flex justify-between items-center mb-3">
-                      <span className="theme-badge">{theme.name} Active</span>
-                      <span className="text-[11px] font-mono opacity-70">data-theme="{theme.id}"</span>
+                  <div className="theme-card space-y-4 p-5 text-left">
+                    {/* Full Top Navbar */}
+                    <div className="flex items-center justify-between border-b pb-3 border-current/10">
+                      <div className="flex items-center gap-2 font-black text-sm tracking-tight">
+                        <span className="w-3 h-3 rounded-full inline-block" style={{ backgroundColor: theme.primary }} />
+                        <span>AuraPlatform</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="theme-badge text-[10px]">{theme.category}</span>
+                        <button className="theme-btn text-xs py-1 px-3">Launch App</button>
+                      </div>
                     </div>
-                    <h3 className="text-xl font-bold mb-2">Interactive Card Preview</h3>
-                    <p className="text-sm opacity-80 mb-4 leading-relaxed">
-                      Customizing colors dynamically updates theme tokens in real-time.
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <button className="theme-btn text-xs py-1.5 px-3">Primary Action</button>
-                      <button className="theme-btn theme-btn-secondary text-xs py-1.5 px-3">Secondary</button>
+
+                    {/* Hero Headline & Subtitle */}
+                    <div className="py-2">
+                      <span className="text-xs font-mono opacity-60 block uppercase tracking-wider mb-1">
+                        data-theme="{theme.id}"
+                      </span>
+                      <h3 className="text-2xl font-black leading-tight tracking-tight mb-2">
+                        Build World-Class Web Applications with {theme.name}
+                      </h3>
+                      <p className="text-xs opacity-80 leading-relaxed max-w-lg">
+                        Zero-config theme switching system with instant CSS variables, typography tokens, and responsive UI components.
+                      </p>
                     </div>
-                    <input className="theme-input text-xs" placeholder="Type here to test focus state..." />
+
+                    {/* Search & Newsletter Form */}
+                    <div className="flex flex-col sm:flex-row gap-2 pt-1">
+                      <input className="theme-input text-xs py-2 px-3 flex-1" placeholder="Enter work email for instant access..." />
+                      <button className="theme-btn text-xs py-2 px-4 whitespace-nowrap">Get Started Free</button>
+                      <button className="theme-btn theme-btn-secondary text-xs py-2 px-3">Docs</button>
+                    </div>
+
+                    {/* Mini Stats Bar */}
+                    <div className="grid grid-cols-3 gap-2 pt-2">
+                      <div className="p-2.5 rounded border border-current/10 bg-current/5">
+                        <div className="text-[10px] opacity-60 uppercase font-mono">Total Deployments</div>
+                        <div className="text-base font-black mt-0.5">142,900+</div>
+                      </div>
+                      <div className="p-2.5 rounded border border-current/10 bg-current/5">
+                        <div className="text-[10px] opacity-60 uppercase font-mono">Uptime</div>
+                        <div className="text-base font-black mt-0.5">99.99%</div>
+                      </div>
+                      <div className="p-2.5 rounded border border-current/10 bg-current/5">
+                        <div className="text-[10px] opacity-60 uppercase font-mono">Satisfaction</div>
+                        <div className="text-base font-black mt-0.5">4.95 / 5 ⭐</div>
+                      </div>
+                    </div>
                   </div>
                 )}
 

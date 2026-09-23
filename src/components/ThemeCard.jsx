@@ -57,19 +57,50 @@ export default function ThemeCard({ theme, onSelect, appMode, isFavorite, onTogg
           {theme.desc}
         </p>
 
-        {/* Live Theme Preview Box */}
-        <div className={`mt-auto rounded-xl overflow-hidden p-1 border ${
-          isLight ? 'border-slate-200 bg-slate-100' : 'border-white/5 bg-black/40'
+        {/* Live Theme Dummy Landing Page Preview Box */}
+        <div className={`mt-auto rounded-xl overflow-hidden p-1.5 border transition-all ${
+          isLight ? 'border-slate-200 bg-slate-100/80' : 'border-white/5 bg-black/40'
         }`}>
-          <div data-theme={theme.id} className="p-3 rounded-lg transition-colors">
-            <div className="theme-card">
-              <div className="flex items-center justify-between mb-2">
-                <span className="theme-badge">{theme.name}</span>
-                <span className="text-[10px] font-mono opacity-60">data-theme="{theme.id}"</span>
+          <div data-theme={theme.id} className="p-2.5 rounded-lg transition-colors">
+            <div className="theme-card space-y-2.5 p-3.5 shadow-sm text-left">
+              {/* Mini Top Navbar */}
+              <div className="flex items-center justify-between border-b pb-2 border-current/10">
+                <div className="flex items-center gap-1.5 font-extrabold text-xs tracking-tight">
+                  <span className="w-2.5 h-2.5 rounded-full inline-block" style={{ backgroundColor: theme.primary }} />
+                  <span>AuraApp</span>
+                </div>
+                <span className="theme-badge text-[9px] px-1.5 py-0.5">{theme.category}</span>
               </div>
-              <div className="flex gap-2">
-                <button className="theme-btn text-xs py-1 px-3">Button</button>
-                <input className="theme-input text-xs py-1 px-2 pointer-events-none" placeholder="Input..." readOnly />
+
+              {/* Mini Hero Header & Subtitle */}
+              <div>
+                <span className="text-[9px] font-mono opacity-60 block uppercase tracking-wider mb-0.5">
+                  data-theme="{theme.id}"
+                </span>
+                <h4 className="text-sm font-black leading-tight tracking-tight mb-1">
+                  Next-Gen {theme.name} UI
+                </h4>
+                <p className="text-[11px] opacity-75 line-clamp-2 leading-tight">
+                  Instant zero-config visual design system tailored for {theme.name}.
+                </p>
+              </div>
+
+              {/* Mini Search & Action Bar */}
+              <div className="flex items-center gap-1.5 pt-0.5">
+                <input className="theme-input text-[10px] py-1 px-2.5 flex-1 pointer-events-none" placeholder="Search components..." readOnly />
+                <button className="theme-btn text-[10px] py-1 px-2.5 whitespace-nowrap">Explore</button>
+              </div>
+
+              {/* Mini Stat Cards Row */}
+              <div className="grid grid-cols-2 gap-1.5 pt-0.5">
+                <div className="p-1.5 rounded border border-current/10 bg-current/5">
+                  <div className="text-[8px] opacity-60 uppercase font-mono">Active Users</div>
+                  <div className="text-xs font-extrabold">24.8K</div>
+                </div>
+                <div className="p-1.5 rounded border border-current/10 bg-current/5">
+                  <div className="text-[8px] opacity-60 uppercase font-mono">Rating</div>
+                  <div className="text-xs font-extrabold">4.9 / 5.0 ⭐</div>
+                </div>
               </div>
             </div>
           </div>
