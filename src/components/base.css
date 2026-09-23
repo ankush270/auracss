@@ -765,3 +765,79 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   transition: width 0.3s ease;
 }
+
+/* ==========================================================================
+   MOBILE & RESPONSIVE BREAKPOINT OVERRIDES (< 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .theme-sidebar {
+    max-width: 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    border-right: none !important;
+    border-bottom: var(--border, 1px solid #e5e7eb) !important;
+  }
+
+  .theme-footer {
+    padding: 1.5rem 1rem !important;
+  }
+
+  .theme-footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .theme-footer-bottom {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+  }
+
+  .theme-hero {
+    padding: 2rem 1rem !important;
+  }
+
+  .theme-hero-title {
+    font-size: 1.75rem !important;
+  }
+
+  .theme-hero-desc {
+    font-size: 0.95rem !important;
+  }
+
+  .theme-card {
+    padding: 1rem !important;
+  }
+
+  .theme-table {
+    display: block !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+  }
+
+  .theme-nav {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+    align-items: flex-start !important;
+  }
+
+  .theme-modal-content {
+    max-width: 95vw !important;
+    padding: 1.25rem !important;
+  }
+
+  .theme-stepper {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  .theme-pricing-card {
+    padding: 1.25rem !important;
+  }
+
+  .theme-pricing-price {
+    font-size: 1.85rem !important;
+  }
+}
+

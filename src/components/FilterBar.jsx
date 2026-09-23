@@ -15,20 +15,20 @@ export default function FilterBar({ searchQuery, setSearchQuery, activeFilter, s
   ];
 
   return (
-    <section className={`border rounded-2xl p-6 mb-10 transition-colors duration-300 ${
+    <section className={`border rounded-2xl p-4 md:p-6 mb-8 transition-colors duration-300 ${
       isLight ? 'bg-white border-slate-200 shadow-xl shadow-slate-200/50' : 'bg-[#131b2e] border-white/10 shadow-2xl'
     }`}>
       {/* Search Input */}
-      <div className="relative mb-6">
-        <Search className={`absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 pointer-events-none ${
+      <div className="relative mb-4 md:mb-6">
+        <Search className={`absolute left-3.5 top-1/2 -translate-y-1/2 w-4.5 h-4.5 pointer-events-none ${
           isLight ? 'text-slate-400' : 'text-slate-400'
         }`} />
         <input
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Search 70 themes by name, typography, or style (e.g. 'cyberpunk', 'retro', 'dark', 'serif', 'bento')..."
-          className={`w-full border pl-12 pr-4 py-3.5 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 transition-all ${
+          placeholder="Search 70 themes by name or style (cyberpunk, retro, dark, serif, bento)..."
+          className={`w-full border pl-10 md:pl-12 pr-4 py-3 rounded-xl text-xs md:text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 transition-all ${
             isLight
               ? 'bg-slate-50 border-slate-200 text-slate-900 placeholder-slate-400 focus:border-indigo-600'
               : 'bg-[#0b0f19]/80 border-white/10 text-white placeholder-slate-500 focus:border-indigo-500'
@@ -36,9 +36,9 @@ export default function FilterBar({ searchQuery, setSearchQuery, activeFilter, s
         />
       </div>
 
-      {/* Category Tabs */}
-      <div className="flex flex-wrap items-center justify-between gap-4">
-        <div className="flex flex-wrap gap-2">
+      {/* Category Tabs (Horizontally Scrollable on Mobile) */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 scrollbar-none scroll-smooth">
           {categories.map((cat) => {
             const Icon = cat.icon;
             const isActive = activeFilter === cat.id;
@@ -46,7 +46,7 @@ export default function FilterBar({ searchQuery, setSearchQuery, activeFilter, s
               <button
                 key={cat.id}
                 onClick={() => setActiveFilter(cat.id)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all cursor-pointer ${
                   isActive
                     ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 border border-indigo-500'
                     : isLight
@@ -61,7 +61,7 @@ export default function FilterBar({ searchQuery, setSearchQuery, activeFilter, s
           })}
         </div>
 
-        <div className={`text-xs font-bold font-mono ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>
+        <div className={`text-[11px] md:text-xs font-bold font-mono whitespace-nowrap ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>
           Showing {themeCount} / {totalCount} Themes
         </div>
       </div>
