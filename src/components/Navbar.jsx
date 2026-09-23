@@ -70,12 +70,6 @@ export default function Navbar({ onCopyNpm, appMode, onToggleAppMode }) {
             <Settings className="w-4 h-4" />
             Customize
           </a>
-          <a href="#publishing" className={`hidden md:flex items-center gap-1.5 text-sm font-semibold transition-colors ${
-            isLight ? 'text-slate-600 hover:text-indigo-600' : 'text-slate-400 hover:text-white'
-          }`}>
-            <UploadCloud className="w-4 h-4" />
-            Publish
-          </a>
         </div>
       </div>
     </header>

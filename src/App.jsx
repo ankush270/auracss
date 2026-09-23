@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import FilterBar from './components/FilterBar';
 import ThemeCard from './components/ThemeCard';
-import ThemeModal from './components/ThemeModal';
+import ThemeDetailPage from './components/ThemeDetailPage';
 import DocsSection from './components/DocsSection';
 import Toast from './components/Toast';
 import { THEMES_DATA } from './data/themesData';
@@ -22,6 +22,11 @@ export default function App() {
       return [];
     }
   });
+
+  // Scroll to top when theme page opens
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [selectedTheme]);
 
   const toggleAppMode = () => {
     setAppMode((prev) => (prev === 'light' ? 'dark' : 'light'));
@@ -77,6 +82,24 @@ export default function App() {
 
   const isLight = appMode === 'light';
 
+  // If a theme is selected, render Full Page Theme Studio view!
+  if (selectedTheme) {
+    return (
+      <>
+        <ThemeDetailPage
+          theme={selectedTheme}
+          onBack={() => setSelectedTheme(null)}
+          onApplyGlobal={handleApplyGlobalTheme}
+          showToast={showToast}
+          appMode={appMode}
+          isFavorite={favorites.includes(selectedTheme.id)}
+          onToggleFavorite={(e) => toggleFavorite(selectedTheme.id, e)}
+        />
+        <Toast message={toastMessage} />
+      </>
+    );
+  }
+
   return (
     <div className={`min-h-screen font-sans transition-colors duration-300 pb-20 ${
       isLight ? 'bg-slate-50 text-slate-900 selection:bg-indigo-500 selection:text-white' : 'bg-[#0b0f19] text-slate-100 selection:bg-indigo-500 selection:text-white'
@@ -129,17 +152,6 @@ export default function App() {
         {/* Documentation & Customization Section */}
         <DocsSection appMode={appMode} />
       </main>
-
-      {/* Theme Detail Modal */}
-      <ThemeModal
-        theme={selectedTheme}
-        onClose={() => setSelectedTheme(null)}
-        onApplyGlobal={handleApplyGlobalTheme}
-        showToast={showToast}
-        appMode={appMode}
-        isFavorite={selectedTheme ? favorites.includes(selectedTheme.id) : false}
-        onToggleFavorite={(e) => selectedTheme && toggleFavorite(selectedTheme.id, e)}
-      />
 
       {/* Toast Notification */}
       <Toast message={toastMessage} />
