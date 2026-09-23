@@ -120,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .theme-btn-secondary {
   background-color: var(--color-secondary, #6b7280);
-  color: #ffffff;
+  color: var(--btn-secondary-text-color, var(--btn-text-color, #ffffff));
 }
 
 .theme-btn-outline {
@@ -131,7 +131,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .theme-btn-outline:hover {
   background-color: var(--color-primary, #3b82f6);
-  color: #ffffff;
+  color: var(--btn-text-color, #ffffff);
 }
 
 .theme-btn-ghost {

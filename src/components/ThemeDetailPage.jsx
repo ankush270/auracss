@@ -309,8 +309,8 @@ module.exports = {
                           <span>AuraCSS Logo</span>
                         </div>
                         <div className="flex gap-2">
-                          <button className="theme-btn theme-btn-sm">Primary Action</button>
-                          <button className="theme-btn theme-btn-outline theme-btn-sm">Docs</button>
+                          <button onClick={() => showToast('Primary Action clicked!')} className="theme-btn theme-btn-sm cursor-pointer">Primary Action</button>
+                          <button onClick={() => showToast('Docs button clicked!')} className="theme-btn theme-btn-outline theme-btn-sm cursor-pointer">Docs</button>
                         </div>
                       </nav>
 
@@ -324,8 +324,8 @@ module.exports = {
                           Universal CSS variable themes for instant UI styling.
                         </p>
                         <div className="flex justify-center gap-2">
-                          <button className="theme-btn text-xs py-2 px-4">Get Started</button>
-                          <button className="theme-btn theme-btn-secondary text-xs py-2 px-4">Explore Components</button>
+                          <button onClick={() => showToast('Get Started clicked!')} className="theme-btn text-xs py-2 px-4 cursor-pointer">Get Started</button>
+                          <button onClick={() => showToast('Explore Components clicked!')} className="theme-btn theme-btn-secondary text-xs py-2 px-4 cursor-pointer">Explore Components</button>
                         </div>
                       </div>
 
@@ -507,27 +507,29 @@ module.exports = {
                       </div>
 
                       {/* Data Table */}
-                      <table className="theme-table">
-                        <thead>
-                          <tr>
-                            <th>Theme ID</th>
-                            <th>Category</th>
-                            <th>Status</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td className="font-bold">agentic</td>
-                            <td>AI Assistant</td>
-                            <td><span className="theme-badge text-[9px]">ACTIVE</span></td>
-                          </tr>
-                          <tr>
-                            <td className="font-bold">cyberpunk</td>
-                            <td>Retro Gaming</td>
-                            <td><span className="theme-badge text-[9px]">ACTIVE</span></td>
-                          </tr>
-                        </tbody>
-                      </table>
+                      <div className="overflow-x-auto rounded-xl border border-current/10">
+                        <table className="theme-table">
+                          <thead>
+                            <tr>
+                              <th>Theme ID</th>
+                              <th>Category</th>
+                              <th>Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td className="font-bold">agentic</td>
+                              <td>AI Assistant</td>
+                              <td><span className="theme-badge text-[9px]">ACTIVE</span></td>
+                            </tr>
+                            <tr>
+                              <td className="font-bold">cyberpunk</td>
+                              <td>Retro Gaming</td>
+                              <td><span className="theme-badge text-[9px]">ACTIVE</span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
 
                     {/* SECTION G: FOOTER */}
@@ -559,7 +561,7 @@ module.exports = {
                       </div>
                       <div className="flex items-center gap-2">
                         <span className="theme-badge text-[10px]">{theme.category} SYSTEM</span>
-                        <button className="theme-btn text-xs py-1.5 px-3.5">Launch App</button>
+                        <button onClick={() => showToast('Launch App clicked!')} className="theme-btn text-xs py-1.5 px-3.5 cursor-pointer">Launch App</button>
                       </div>
                     </div>
 
@@ -577,8 +579,8 @@ module.exports = {
 
                     <div className="flex flex-col sm:flex-row gap-2.5 pt-1">
                       <input className="theme-input text-xs py-2 px-3 flex-1" placeholder="Enter work email for instant access..." />
-                      <button className="theme-btn text-xs py-2 px-4 whitespace-nowrap">Get Started Free</button>
-                      <button className="theme-btn theme-btn-secondary text-xs py-2 px-3">Docs</button>
+                      <button onClick={() => showToast('Get Started Free clicked!')} className="theme-btn text-xs py-2 px-4 whitespace-nowrap cursor-pointer">Get Started Free</button>
+                      <button onClick={() => showToast('Docs clicked!')} className="theme-btn theme-btn-secondary text-xs py-2 px-3 cursor-pointer">Docs</button>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2">
@@ -704,21 +706,21 @@ module.exports = {
                         {dropdownOpen && (
                           <div className="theme-dropdown-menu w-full mt-1">
                             <div
-                              onClick={() => { setSelectedOption('Option 1: Pro Subscription'); showToast('Selected Pro Plan'); }}
+                              onClick={() => { setSelectedOption('Option 1: Pro Subscription'); setDropdownOpen(false); showToast('Selected Pro Plan'); }}
                               className="theme-dropdown-item flex items-center justify-between"
                             >
                               <span>Option 1: Pro Subscription</span>
                               {selectedOption.includes('Pro') && <Check className="w-3.5 h-3.5 text-indigo-600" />}
                             </div>
                             <div
-                              onClick={() => { setSelectedOption('Option 2: Enterprise Team'); showToast('Selected Enterprise'); }}
+                              onClick={() => { setSelectedOption('Option 2: Enterprise Team'); setDropdownOpen(false); showToast('Selected Enterprise'); }}
                               className="theme-dropdown-item flex items-center justify-between"
                             >
                               <span>Option 2: Enterprise Team</span>
                               {selectedOption.includes('Enterprise') && <Check className="w-3.5 h-3.5 text-indigo-600" />}
                             </div>
                             <div
-                              onClick={() => { setSelectedOption('Option 3: Developer Free Tier'); showToast('Selected Free Tier'); }}
+                              onClick={() => { setSelectedOption('Option 3: Developer Free Tier'); setDropdownOpen(false); showToast('Selected Free Tier'); }}
                               className="theme-dropdown-item flex items-center justify-between"
                             >
                               <span>Option 3: Developer Free Tier</span>
@@ -750,11 +752,21 @@ module.exports = {
               <div className={`mt-6 border rounded-xl p-5 ${
                 isLight ? 'bg-slate-50 border-slate-200' : 'bg-black/30 border-white/10'
               }`}>
-                <div className="flex items-center gap-2 mb-4">
-                  <Sliders className="w-4 h-4 text-indigo-600" />
-                  <h4 className={`text-xs font-extrabold uppercase tracking-wider ${isLight ? 'text-slate-800' : 'text-slate-200'}`}>
-                    Live Token Customizer & Overrides
-                  </h4>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-2">
+                    <Sliders className="w-4 h-4 text-indigo-600" />
+                    <h4 className={`text-xs font-extrabold uppercase tracking-wider ${isLight ? 'text-slate-800' : 'text-slate-200'}`}>
+                      Live Token Customizer & Overrides
+                    </h4>
+                  </div>
+                  {(customPrimary || customSecondary || customRadius) && (
+                    <button
+                      onClick={() => { setCustomPrimary(''); setCustomSecondary(''); setCustomRadius(''); showToast('Reset token overrides!'); }}
+                      className="text-xs font-bold text-rose-500 hover:text-rose-600 cursor-pointer underline"
+                    >
+                      Reset Overrides
+                    </button>
+                  )}
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
