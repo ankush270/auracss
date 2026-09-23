@@ -1,7 +1,7 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Heart } from 'lucide-react';
 
-export default function ThemeCard({ theme, onSelect, appMode }) {
+export default function ThemeCard({ theme, onSelect, appMode, isFavorite, onToggleFavorite }) {
   const isLight = appMode === 'light';
 
   return (
@@ -19,11 +19,27 @@ export default function ThemeCard({ theme, onSelect, appMode }) {
           <span className="w-3.5 h-3.5 rounded-full inline-block shadow" style={{ backgroundColor: theme.secondary }} title={`Secondary: ${theme.secondary}`} />
           <span className="w-3.5 h-3.5 rounded-full inline-block border border-slate-300" style={{ backgroundColor: theme.surface }} title={`Surface: ${theme.surface}`} />
         </div>
-        <span className={`text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md ${
-          isLight ? 'bg-slate-200 text-slate-700' : 'bg-white/5 text-slate-400'
-        }`}>
-          {theme.category}
-        </span>
+        
+        <div className="flex items-center gap-2">
+          <button
+            onClick={onToggleFavorite}
+            className={`p-1.5 rounded-lg transition-transform hover:scale-110 cursor-pointer ${
+              isFavorite
+                ? 'text-rose-500 fill-rose-500'
+                : isLight
+                ? 'text-slate-400 hover:text-rose-500'
+                : 'text-slate-500 hover:text-rose-400'
+            }`}
+            title={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
+          >
+            <Heart className={`w-4 h-4 ${isFavorite ? 'fill-rose-500 text-rose-500' : ''}`} />
+          </button>
+          <span className={`text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-md ${
+            isLight ? 'bg-slate-200 text-slate-700' : 'bg-white/5 text-slate-400'
+          }`}>
+            {theme.category}
+          </span>
+        </div>
       </div>
 
       {/* Main Body */}

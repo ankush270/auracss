@@ -1,11 +1,12 @@
 import React from 'react';
-import { Search, Grid, Bot, Briefcase, Gamepad2, Palette, Gem } from 'lucide-react';
+import { Search, Grid, Bot, Briefcase, Gamepad2, Palette, Gem, Heart } from 'lucide-react';
 
-export default function FilterBar({ searchQuery, setSearchQuery, activeFilter, setActiveFilter, themeCount, totalCount, appMode }) {
+export default function FilterBar({ searchQuery, setSearchQuery, activeFilter, setActiveFilter, themeCount, totalCount, favCount = 0, appMode }) {
   const isLight = appMode === 'light';
 
   const categories = [
     { id: 'all', label: 'All Themes', icon: Grid },
+    { id: 'favorites', label: `Favorites (${favCount})`, icon: Heart },
     { id: 'ai', label: 'AI Assistants', icon: Bot },
     { id: 'saas', label: 'B2B SaaS', icon: Briefcase },
     { id: 'retro', label: 'Gaming & Retro', icon: Gamepad2 },

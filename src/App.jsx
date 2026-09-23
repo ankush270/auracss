@@ -14,9 +14,30 @@ export default function App() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [selectedTheme, setSelectedTheme] = useState(null);
   const [toastMessage, setToastMessage] = useState(null);
+  const [favorites, setFavorites] = useState(() => {
+    try {
+      const saved = localStorage.getItem('auracss_favorites');
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  });
 
   const toggleAppMode = () => {
     setAppMode((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
+
+  const toggleFavorite = (themeId, e) => {
+    if (e) e.stopPropagation();
+    setFavorites((prev) => {
+      const isFav = prev.includes(themeId);
+      const next = isFav ? prev.filter((id) => id !== themeId) : [...prev, themeId];
+      try {
+        localStorage.setItem('auracss_favorites', JSON.stringify(next));
+      } catch (err) {}
+      showToast(isFav ? `Removed from favorites` : `Added to favorites! ❤️`);
+      return next;
+    });
   };
 
   const showToast = (msg) => {
@@ -35,7 +56,14 @@ export default function App() {
   };
 
   const filteredThemes = THEMES_DATA.filter((theme) => {
-    const matchesCategory = activeFilter === 'all' || theme.category === activeFilter;
+    const isFav = favorites.includes(theme.id);
+    const matchesCategory =
+      activeFilter === 'all'
+        ? true
+        : activeFilter === 'favorites'
+        ? isFav
+        : theme.category === activeFilter;
+
     const query = searchQuery.toLowerCase().trim();
     const matchesSearch =
       !query ||
@@ -69,6 +97,7 @@ export default function App() {
           setActiveFilter={setActiveFilter}
           themeCount={filteredThemes.length}
           totalCount={THEMES_DATA.length}
+          favCount={favorites.length}
           appMode={appMode}
         />
 
@@ -79,7 +108,7 @@ export default function App() {
           }`}>
             <h3 className={`text-xl font-bold mb-2 ${isLight ? 'text-slate-900' : 'text-white'}`}>No themes match your search</h3>
             <p className={isLight ? 'text-slate-500 text-sm' : 'text-slate-400 text-sm'}>
-              Try searching for keywords like "cyberpunk", "dark", "retro", "glass", or "bento".
+              {activeFilter === 'favorites' ? 'You haven\'t added any themes to favorites yet. Click the heart icon on any card to save!' : 'Try searching for keywords like "cyberpunk", "dark", "retro", "glass", or "bento".'}
             </p>
           </div>
         ) : (
@@ -90,6 +119,8 @@ export default function App() {
                 theme={theme}
                 onSelect={(t) => setSelectedTheme(t)}
                 appMode={appMode}
+                isFavorite={favorites.includes(theme.id)}
+                onToggleFavorite={(e) => toggleFavorite(theme.id, e)}
               />
             ))}
           </div>
@@ -106,6 +137,8 @@ export default function App() {
         onApplyGlobal={handleApplyGlobalTheme}
         showToast={showToast}
         appMode={appMode}
+        isFavorite={selectedTheme ? favorites.includes(selectedTheme.id) : false}
+        onToggleFavorite={(e) => selectedTheme && toggleFavorite(selectedTheme.id, e)}
       />
 
       {/* Toast Notification */}
