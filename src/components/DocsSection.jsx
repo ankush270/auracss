@@ -1,34 +1,40 @@
 import React from 'react';
-import { Terminal, Code, Sliders, CheckCircle, Component, Layers } from 'lucide-react';
+import { Terminal, Code, Sliders, CheckCircle, Layers } from 'lucide-react';
 
 export default function DocsSection({ appMode }) {
   const isLight = appMode === 'light';
 
   const componentList = [
-    { class: '.theme-sidebar', desc: 'Complete navigation sidebar layout with headers, active items, badges & profile footers', tag: 'Navigation' },
-    { class: '.theme-footer', desc: 'Multi-column responsive website footer with section links & copyright row', tag: 'Layout' },
-    { class: '.theme-hero', desc: 'Full-width hero section container with prominent display title & CTA container', tag: 'Layout' },
-    { class: '.theme-pricing-card', desc: 'Product pricing plan card with popular badge highlight & feature list', tag: 'E-Commerce' },
-    { class: '.theme-card', desc: 'Main surface container box with adaptive background, border & radius', tag: 'Surfaces' },
-    { class: '.theme-btn', desc: 'Primary action button with hover glow, transitions & state transforms', tag: 'Actions' },
-    { class: '.theme-input', desc: 'Form text input with theme focus ring, custom border & typography', tag: 'Forms' },
-    { class: '.theme-select', desc: 'Custom select dropdown styled for active theme design system', tag: 'Forms' },
-    { class: '.theme-switch', desc: 'Interactive toggle switch control with animated slider track', tag: 'Forms' },
-    { class: '.theme-dropzone', desc: 'File upload drag-and-drop area with dashed themed borders', tag: 'Forms' },
-    { class: '.theme-badge', desc: 'Pill badge tag for categories, status indicators & notification counts', tag: 'Data' },
-    { class: '.theme-avatar', desc: 'User profile avatar circle with sizes (sm, lg) & avatar stack groups', tag: 'Data' },
-    { class: '.theme-stat', desc: 'Analytics stat card widget container with metric label & large value', tag: 'Data' },
-    { class: '.theme-alert', desc: 'Callout alert notification banner with success, warning & error borders', tag: 'Feedback' },
-    { class: '.theme-toast', desc: 'Floating notification toast card with box shadows & close action', tag: 'Feedback' },
-    { class: '.theme-table', desc: 'Data table with themed headers, row hover states & borders', tag: 'Data' },
-    { class: '.theme-accordion', desc: 'Collapsible accordion component with header bar & expand content', tag: 'Navigation' },
-    { class: '.theme-breadcrumb', desc: 'Breadcrumbs navigation trail with separators', tag: 'Navigation' },
-    { class: '.theme-pagination', desc: 'Page numbers pagination controls with active state highlights', tag: 'Navigation' },
-    { class: '.theme-stepper', desc: 'Multi-step process indicator with active & completed step dots', tag: 'Navigation' },
-    { class: '.theme-timeline', desc: 'Vertical event timeline list with themed indicator dots', tag: 'Data' },
-    { class: '.theme-modal-content', desc: 'Dialog modal window box with card headers, body & footer actions', tag: 'Overlays' },
-    { class: '.theme-dropdown-menu', desc: 'Floating dropdown popup menu with hover items & dividers', tag: 'Overlays' },
-    { class: '.theme-nav', desc: 'Top navigation header bar with brand logo & quick action controls', tag: 'Navigation' },
+    { class: '.theme-sidebar', desc: 'Navigation sidebar layout with headers, menu items, active states & profile footer', tag: 'Navigation' },
+    { class: '.theme-footer', desc: 'Multi-column website footer with logo, navigation column grids & copyright row', tag: 'Layout' },
+    { class: '.theme-hero', desc: 'Hero section container with prominent display headline, subtitle & CTA buttons', tag: 'Layout' },
+    { class: '.theme-pricing-card', desc: 'Product pricing card with popular highlight border, price display & features list', tag: 'E-Commerce' },
+    { class: '.theme-card', desc: 'Main surface card box with adaptive background, border & corner radius', tag: 'Surfaces' },
+    { class: '.theme-feature-card', desc: 'Feature highlight box with icon container, title & hover animation', tag: 'Marketing' },
+    { class: '.theme-testimonial-card', desc: 'Customer review card with left color accent border & quote block', tag: 'Marketing' },
+    { class: '.theme-btn', desc: 'Primary action button with hover glow, transition & shadow states', tag: 'Actions' },
+    { class: '.theme-btn-secondary', desc: 'Secondary action button styled in theme secondary accent', tag: 'Actions' },
+    { class: '.theme-btn-outline', desc: 'Transparent outline button with themed border line', tag: 'Actions' },
+    { class: '.theme-input', desc: 'Form text input field with theme focus glow ring & adaptive border', tag: 'Forms' },
+    { class: '.theme-select', desc: 'Native custom select dropdown box for active design system', tag: 'Forms' },
+    { class: '.theme-switch', desc: 'Interactive toggle switch control with animated slider indicator', tag: 'Forms' },
+    { class: '.theme-dropzone', desc: 'File drag-and-drop area with dashed themed borders & upload icon', tag: 'Forms' },
+    { class: '.theme-badge', desc: 'Pill badge tag for categories, status indicators & notification badges', tag: 'Data' },
+    { class: '.theme-avatar', desc: 'User profile avatar circle with sm/lg sizes & stacked avatar groups', tag: 'Data' },
+    { class: '.theme-stat', desc: 'Analytics stat card widget container with metric label & large value display', tag: 'Data' },
+    { class: '.theme-alert', desc: 'Notification alert banner with success, warning, and error border styling', tag: 'Feedback' },
+    { class: '.theme-toast', desc: 'Floating notification toast popup with shadow & dismiss icon', tag: 'Feedback' },
+    { class: '.theme-modal-content', desc: 'Dialog modal window card with header title, body text & action buttons', tag: 'Overlays' },
+    { class: '.theme-dropdown-menu', desc: 'Floating dropdown menu with hover option items & dividers', tag: 'Overlays' },
+    { class: '.theme-table', desc: 'Data table with themed header border, zebra rows & hover highlights', tag: 'Data' },
+    { class: '.theme-accordion', desc: 'Collapsible accordion component with expandable body text', tag: 'Navigation' },
+    { class: '.theme-breadcrumb', desc: 'Breadcrumb trail navigation with separators & links', tag: 'Navigation' },
+    { class: '.theme-pagination', desc: 'Pagination button controls with active page indicator', tag: 'Navigation' },
+    { class: '.theme-stepper', desc: 'Multi-step process indicator with active & completed step icons', tag: 'Navigation' },
+    { class: '.theme-timeline', desc: 'Vertical event timeline list with themed status indicator dots', tag: 'Data' },
+    { class: '.theme-progress', desc: 'Progress bar container with theme primary colored fill indicator', tag: 'Feedback' },
+    { class: '.theme-spinner', desc: 'Loading spinner indicator circle with smooth infinite spin animation', tag: 'Feedback' },
+    { class: '.theme-banner', desc: 'Top announcements banner bar with left color stripe & close action', tag: 'Marketing' },
   ];
 
   return (
@@ -89,13 +95,13 @@ export default function DocsSection({ appMode }) {
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-200 text-indigo-700 px-3.5 py-1 rounded-full text-xs font-bold mb-3">
             <Layers className="w-3.5 h-3.5 text-indigo-600" />
-            <span>24+ Ready-to-Use UI Component Classes</span>
+            <span>30+ Ready-to-Use Website Component Classes</span>
           </div>
           <h2 className={`text-3xl font-black tracking-tight mb-2 ${isLight ? 'text-slate-900' : 'text-white'}`}>
             Available Semantic Components
           </h2>
           <p className={`text-sm ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>
-            Every theme automatically styles these 24+ universal semantic CSS classes out of the box.
+            Every theme automatically styles these 30+ universal website CSS component classes out of the box.
           </p>
         </div>
 

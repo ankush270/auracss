@@ -1,6 +1,6 @@
 /* ==========================================================================
-   AURACSS - EXPANDED SEMANTIC COMPONENT LIBRARY (30+ COMPONENTS)
-   Universal class definitions mapped to per-theme CSS Variables.
+   AURACSS - ULTIMATE SEMANTIC COMPONENT LIBRARY (40+ COMPONENTS)
+   Universal CSS class definitions mapped to per-theme CSS Variables.
    ========================================================================== */
 
 /* Root & Global Reset Baseline */
@@ -21,7 +21,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
-/* 1. Card & Container Components */
+/* --------------------------------------------------------------------------
+   1. CARDS, CONTAINERS & SURFACES
+   -------------------------------------------------------------------------- */
 .theme-card {
   background-color: var(--bg-card, #ffffff);
   color: var(--text-main);
@@ -48,6 +50,13 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: var(--border, 1px solid #e5e7eb);
   padding-bottom: 1rem;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.theme-card-body {
+  flex: 1;
 }
 
 .theme-card-footer {
@@ -59,7 +68,30 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
 }
 
-/* 2. Button Components & Variants */
+.theme-feature-card {
+  background-color: var(--bg-card, #ffffff);
+  border: var(--border, 1px solid #e5e7eb);
+  border-radius: var(--radius, 12px);
+  padding: 1.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.theme-feature-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+}
+
+.theme-testimonial-card {
+  background-color: var(--bg-card, #ffffff);
+  border: var(--border, 1px solid #e5e7eb);
+  border-left: 4px solid var(--color-primary, #3b82f6);
+  border-radius: var(--radius, 8px);
+  padding: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   2. BUTTONS & ACTIONS
+   -------------------------------------------------------------------------- */
 .theme-btn {
   background-color: var(--color-primary, #3b82f6);
   color: var(--btn-text-color, #ffffff);
@@ -122,7 +154,17 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.05rem;
 }
 
-/* 3. Form Controls & Inputs */
+/* --------------------------------------------------------------------------
+   3. FORMS, INPUTS & CONTROLS
+   -------------------------------------------------------------------------- */
+.theme-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
 .theme-input {
   background-color: var(--bg-card, #ffffff);
   color: var(--text-main);
@@ -169,7 +211,6 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
-/* Toggle Switch Component */
 .theme-switch {
   display: inline-flex;
   align-items: center;
@@ -207,7 +248,6 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(20px);
 }
 
-/* File Dropzone Component */
 .theme-dropzone {
   background-color: var(--bg-card, #ffffff);
   border: 2px dashed var(--border, #d1d5db);
@@ -223,7 +263,9 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--bg-badge, rgba(0,0,0,0.02));
 }
 
-/* 4. Badges, Tags & Pills */
+/* --------------------------------------------------------------------------
+   4. BADGES, TAGS, PILLS & AVATARS
+   -------------------------------------------------------------------------- */
 .theme-badge {
   background-color: var(--bg-badge, var(--color-primary));
   color: var(--badge-text-color, #ffffff);
@@ -249,7 +291,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
-/* Avatars & Avatar Group */
 .theme-avatar {
   width: 40px;
   height: 40px;
@@ -280,7 +321,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 0;
 }
 
-/* 5. Stat Widgets & Analytics Cards */
+/* --------------------------------------------------------------------------
+   5. STAT WIDGETS & BANNERS
+   -------------------------------------------------------------------------- */
 .theme-stat {
   background-color: var(--bg-card, #ffffff);
   border: var(--border, 1px solid #e5e7eb);
@@ -304,7 +347,20 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display, var(--font-family));
 }
 
-/* 6. Alerts & Notifications */
+.theme-banner {
+  background-color: var(--bg-card, #ffffff);
+  border: var(--border, 1px solid #e5e7eb);
+  border-left: 4px solid var(--color-primary, #3b82f6);
+  border-radius: var(--radius, 8px);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --------------------------------------------------------------------------
+   6. ALERTS, TOASTS & MODALS
+   -------------------------------------------------------------------------- */
 .theme-alert {
   background-color: var(--bg-card, #ffffff);
   border-left: 4px solid var(--color-primary, #3b82f6);
@@ -323,7 +379,6 @@ h1, h2, h3, h4, h5, h6 {
 .theme-alert-warning { border-left-color: #f59e0b; }
 .theme-alert-error { border-left-color: #ef4444; }
 
-/* Toast Notification Component */
 .theme-toast {
   background-color: var(--bg-card, #ffffff);
   border: var(--border, 1px solid #e5e7eb);
@@ -336,7 +391,19 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 360px;
 }
 
-/* 7. Data Tables */
+.theme-modal-content {
+  background-color: var(--bg-card, #ffffff);
+  border: var(--border, 1px solid #e5e7eb);
+  border-radius: var(--radius, 12px);
+  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.2);
+  padding: 1.75rem;
+  max-width: 480px;
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   7. DATA TABLES
+   -------------------------------------------------------------------------- */
 .theme-table {
   width: 100%;
   border-collapse: collapse;
@@ -362,7 +429,9 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--bg-badge, rgba(0,0,0,0.02));
 }
 
-/* 8. Navigation & Tabs */
+/* --------------------------------------------------------------------------
+   8. NAVIGATION, SIDEBAR, DROPDOWNS & TABS
+   -------------------------------------------------------------------------- */
 .theme-nav {
   background-color: var(--bg-card, #ffffff);
   border-bottom: var(--border, 1px solid #e5e7eb);
@@ -389,7 +458,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-primary);
 }
 
-/* 9. Sidebar Navigation Component (EXTENDED) */
 .theme-sidebar {
   background-color: var(--bg-card, #ffffff);
   border-right: var(--border, 1px solid #e5e7eb);
@@ -453,7 +521,38 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.75rem;
 }
 
-/* 10. Footer Component (EXTENDED) */
+.theme-dropdown-menu {
+  background-color: var(--bg-card, #ffffff);
+  border: var(--border, 1px solid #e5e7eb);
+  border-radius: var(--radius, 8px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.theme-dropdown-item {
+  padding: 0.55rem 0.85rem;
+  border-radius: var(--radius, 4px);
+  font-size: 0.85rem;
+  color: var(--text-main);
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.theme-dropdown-item:hover {
+  background-color: var(--bg-badge, rgba(0,0,0,0.05));
+  color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+   9. FOOTER & FOOTER SECTIONS
+   -------------------------------------------------------------------------- */
 .theme-footer {
   background-color: var(--bg-card, #ffffff);
   border-top: var(--border, 1px solid #e5e7eb);
@@ -512,7 +611,9 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.7;
 }
 
-/* 11. Hero Banner Component */
+/* --------------------------------------------------------------------------
+   10. HERO BANNERS & PRICING
+   -------------------------------------------------------------------------- */
 .theme-hero {
   background-color: var(--bg-card, #ffffff);
   border: var(--border, 1px solid #e5e7eb);
@@ -537,7 +638,33 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto 1.75rem auto;
 }
 
-/* 12. Breadcrumbs Component */
+.theme-pricing-card {
+  background-color: var(--bg-card, #ffffff);
+  border: var(--border, 1px solid #e5e7eb);
+  border-radius: var(--radius, 12px);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.theme-pricing-popular {
+  border-color: var(--color-primary, #3b82f6);
+  border-width: 2px;
+  box-shadow: 0 10px 30px -10px var(--color-primary, rgba(59, 130, 246, 0.3));
+}
+
+.theme-pricing-price {
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-family: var(--font-display, var(--font-family));
+  margin: 1rem 0;
+}
+
+/* --------------------------------------------------------------------------
+   11. BREADCRUMBS, PAGINATION, STEPPER & TIMELINE
+   -------------------------------------------------------------------------- */
 .theme-breadcrumb {
   display: flex;
   align-items: center;
@@ -557,7 +684,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-primary);
 }
 
-/* 13. Pagination Component */
 .theme-pagination {
   display: flex;
   align-items: center;
@@ -586,7 +712,6 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--color-primary);
 }
 
-/* 14. Accordion Component */
 .theme-accordion {
   border: var(--border, 1px solid #e5e7eb);
   border-radius: var(--radius, 8px);
@@ -612,32 +737,6 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.85;
 }
 
-/* 15. Pricing Cards Component */
-.theme-pricing-card {
-  background-color: var(--bg-card, #ffffff);
-  border: var(--border, 1px solid #e5e7eb);
-  border-radius: var(--radius, 12px);
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  transition: all 0.2s ease;
-}
-
-.theme-pricing-popular {
-  border-color: var(--color-primary, #3b82f6);
-  border-width: 2px;
-  box-shadow: 0 10px 30px -10px var(--color-primary, rgba(59, 130, 246, 0.3));
-}
-
-.theme-pricing-price {
-  font-size: 2.5rem;
-  font-weight: 900;
-  font-family: var(--font-display, var(--font-family));
-  margin: 1rem 0;
-}
-
-/* 16. Stepper / Process Flow */
 .theme-stepper {
   display: flex;
   align-items: center;
@@ -672,7 +771,6 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--color-primary, #3b82f6);
 }
 
-/* 17. Timeline Component */
 .theme-timeline {
   display: flex;
   flex-direction: column;
@@ -697,45 +795,9 @@ h1, h2, h3, h4, h5, h6 {
   border: 3px solid var(--bg-card, #ffffff);
 }
 
-/* 18. Modal Dialog Mockup */
-.theme-modal-content {
-  background-color: var(--bg-card, #ffffff);
-  border: var(--border, 1px solid #e5e7eb);
-  border-radius: var(--radius, 12px);
-  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.2);
-  padding: 1.75rem;
-  max-width: 480px;
-  width: 100%;
-}
-
-/* 19. Dropdown Menu Component */
-.theme-dropdown-menu {
-  background-color: var(--bg-card, #ffffff);
-  border: var(--border, 1px solid #e5e7eb);
-  border-radius: var(--radius, 8px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem;
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.theme-dropdown-item {
-  padding: 0.5rem 0.75rem;
-  border-radius: var(--radius, 4px);
-  font-size: 0.85rem;
-  color: var(--text-main);
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.theme-dropdown-item:hover {
-  background-color: var(--bg-badge, rgba(0,0,0,0.05));
-  color: var(--color-primary);
-}
-
-/* 20. Miscellaneous UI Utilities */
+/* --------------------------------------------------------------------------
+   12. MISCELLANEOUS UI UTILITIES (SPINNERS, KBD, PROGRESS)
+   -------------------------------------------------------------------------- */
 .theme-divider {
   border: none;
   border-top: var(--border, 1px solid #e5e7eb);
@@ -766,9 +828,23 @@ h1, h2, h3, h4, h5, h6 {
   transition: width 0.3s ease;
 }
 
-/* ==========================================================================
+.theme-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--border, #e5e7eb);
+  border-top-color: var(--color-primary, #3b82f6);
+  border-radius: 50%;
+  animation: theme-spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes theme-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* --------------------------------------------------------------------------
    MOBILE & RESPONSIVE BREAKPOINT OVERRIDES (< 768px)
-   ========================================================================== */
+   -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
   .theme-sidebar {
     max-width: 100% !important;
@@ -840,4 +916,3 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.85rem !important;
   }
 }
-
