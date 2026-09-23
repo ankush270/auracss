@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { ArrowLeft, Globe, Code2, Sliders, Layout, Heart, Copy, Download, Sparkles, Check, Type, Layers, Eye, Menu, ChevronDown, CheckSquare, User, Bell, Search, Settings, HelpCircle, Package, Folder, Plus, X, UploadCloud, CreditCard, Shield, Zap } from 'lucide-react';
+import { ArrowLeft, Globe, Code2, Sliders, Layout, Heart, Copy, Download, Sparkles, Check, Type, Layers, Eye, Menu, ChevronDown, CheckSquare, User, Bell, Search, Settings, HelpCircle, Package, Folder, Plus, X, UploadCloud, CreditCard, Shield, Zap, Info, AlertTriangle, AlertCircle, Clock, Star, MessageSquare } from 'lucide-react';
 
 export default function ThemeDetailPage({ theme, onBack, onApplyGlobal, showToast, appMode, isFavorite, onToggleFavorite }) {
-  const [activeTab, setActiveTab] = useState('card');
+  const [activeTab, setActiveTab] = useState('all-gallery');
   const [snippetFormat, setSnippetFormat] = useState('react');
   const [copiedType, setCopiedType] = useState(null);
   const [fontSampleText, setFontSampleText] = useState('The quick brown fox jumps over the lazy dog.');
@@ -204,10 +204,10 @@ module.exports = {
               </div>
 
               <h1 className={`text-3xl md:text-5xl font-black tracking-tight mb-2 ${isLight ? 'text-slate-900' : 'text-white'}`}>
-                {theme.name} Design System
+                {theme.name} Design System Studio
               </h1>
               <p className={`text-sm md:text-base max-w-3xl leading-relaxed ${isLight ? 'text-slate-600' : 'text-slate-300'}`}>
-                {theme.desc} Full suite of semantic UI components including Sidebars, Dropdowns, Menus, Footers, Pricing Tables, Forms, and Dialogs.
+                {theme.desc} Live interactive showcase for all 40+ semantic website components.
               </p>
             </div>
 
@@ -245,6 +245,16 @@ module.exports = {
 
                 <div className="flex flex-wrap gap-1.5">
                   <button
+                    onClick={() => setActiveTab('all-gallery')}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                      activeTab === 'all-gallery'
+                        ? 'bg-indigo-600 text-white shadow'
+                        : isLight ? 'bg-slate-100 text-slate-700 hover:bg-slate-200' : 'bg-white/5 text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    🔥 All 40+ Components Gallery
+                  </button>
+                  <button
                     onClick={() => setActiveTab('card')}
                     className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                       activeTab === 'card'
@@ -272,37 +282,7 @@ module.exports = {
                         : isLight ? 'bg-slate-100 text-slate-700 hover:bg-slate-200' : 'bg-white/5 text-slate-400 hover:text-white'
                     }`}
                   >
-                    Menus & Dropdowns
-                  </button>
-                  <button
-                    onClick={() => setActiveTab('footer')}
-                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                      activeTab === 'footer'
-                        ? 'bg-indigo-600 text-white shadow'
-                        : isLight ? 'bg-slate-100 text-slate-700 hover:bg-slate-200' : 'bg-white/5 text-slate-400 hover:text-white'
-                    }`}
-                  >
-                    Footer Section
-                  </button>
-                  <button
-                    onClick={() => setActiveTab('pricing')}
-                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                      activeTab === 'pricing'
-                        ? 'bg-indigo-600 text-white shadow'
-                        : isLight ? 'bg-slate-100 text-slate-700 hover:bg-slate-200' : 'bg-white/5 text-slate-400 hover:text-white'
-                    }`}
-                  >
-                    Pricing Cards
-                  </button>
-                  <button
-                    onClick={() => setActiveTab('forms')}
-                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                      activeTab === 'forms'
-                        ? 'bg-indigo-600 text-white shadow'
-                        : isLight ? 'bg-slate-100 text-slate-700 hover:bg-slate-200' : 'bg-white/5 text-slate-400 hover:text-white'
-                    }`}
-                  >
-                    Inputs & Toggles
+                    Menus & Options
                   </button>
                 </div>
               </div>
@@ -313,7 +293,263 @@ module.exports = {
                 style={customStyleObj}
                 className="p-4 sm:p-6 rounded-2xl border border-slate-200/60 shadow-md transition-all min-h-[420px] overflow-hidden"
               >
-                {/* 1. Full Landing Page Preview */}
+                {/* 1. ALL 40+ COMPONENTS GALLERY DEMO TAB */}
+                {activeTab === 'all-gallery' && (
+                  <div className="space-y-8 p-2 text-left">
+                    {/* SECTION A: HERO, NAVBAR & BANNERS */}
+                    <div className="space-y-4">
+                      <div className="text-xs font-mono font-bold uppercase tracking-wider opacity-70">
+                        1. Header, Hero & Banners
+                      </div>
+
+                      {/* Navbar */}
+                      <nav className="theme-nav">
+                        <div className="flex items-center gap-2 font-black text-sm">
+                          <span className="w-3 h-3 rounded-full" style={{ backgroundColor: theme.primary }} />
+                          <span>AuraCSS Logo</span>
+                        </div>
+                        <div className="flex gap-2">
+                          <button className="theme-btn theme-btn-sm">Primary Action</button>
+                          <button className="theme-btn theme-btn-outline theme-btn-sm">Docs</button>
+                        </div>
+                      </nav>
+
+                      {/* Hero Section */}
+                      <div className="theme-hero">
+                        <span className="theme-badge mb-2">HERO COMPONENT</span>
+                        <h2 className="theme-hero-title text-2xl md:text-4xl">
+                          {theme.name} Design System
+                        </h2>
+                        <p className="theme-hero-desc text-xs md:text-sm">
+                          Universal CSS variable themes for instant UI styling.
+                        </p>
+                        <div className="flex justify-center gap-2">
+                          <button className="theme-btn text-xs py-2 px-4">Get Started</button>
+                          <button className="theme-btn theme-btn-secondary text-xs py-2 px-4">Explore Components</button>
+                        </div>
+                      </div>
+
+                      {/* Banner */}
+                      <div className="theme-banner">
+                        <div className="flex items-center gap-2 text-xs font-bold">
+                          <Sparkles className="w-4 h-4 text-amber-500" />
+                          <span>Announcement: New 40+ Semantic Components Released!</span>
+                        </div>
+                        <span className="theme-pill text-[10px]">v1.0.0</span>
+                      </div>
+                    </div>
+
+                    {/* SECTION B: CARDS, FEATURE CARDS & TESTIMONIALS */}
+                    <div className="space-y-4">
+                      <div className="text-xs font-mono font-bold uppercase tracking-wider opacity-70">
+                        2. Cards, Feature Tiles & Testimonials
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="theme-feature-card">
+                          <Zap className="w-6 h-6 text-indigo-500 mb-2" />
+                          <h4 className="text-sm font-bold mb-1">Instant Variable Switching</h4>
+                          <p className="text-xs opacity-75 leading-relaxed">
+                            Zero JS runtime overhead. Built directly with native CSS variables.
+                          </p>
+                        </div>
+
+                        <div className="theme-testimonial-card">
+                          <p className="text-xs italic opacity-85 mb-3 leading-relaxed">
+                            "AuraCSS saved us weeks of UI development time with 70 handcrafted themes."
+                          </p>
+                          <div className="flex items-center gap-2">
+                            <div className="theme-avatar theme-avatar-sm">AK</div>
+                            <div>
+                              <div className="text-xs font-bold">Ankush Craps</div>
+                              <div className="text-[10px] opacity-60">Lead Developer</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* SECTION C: SIDEBAR & DROPDOWN MENUS */}
+                    <div className="space-y-4">
+                      <div className="text-xs font-mono font-bold uppercase tracking-wider opacity-70">
+                        3. Sidebar & Dropdown Menu Options
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {/* Sidebar */}
+                        <aside className="theme-sidebar">
+                          <div className="theme-sidebar-header">
+                            <span className="font-extrabold text-xs">Sidebar Component</span>
+                            <span className="theme-badge text-[9px]">Pro</span>
+                          </div>
+                          <div className="theme-sidebar-menu">
+                            <a className="theme-sidebar-item theme-sidebar-item-active">
+                              <span>Dashboard</span>
+                              <span className="theme-badge text-[9px]">HOT</span>
+                            </a>
+                            <a className="theme-sidebar-item"><span>Analytics</span></a>
+                            <a className="theme-sidebar-item"><span>Settings</span></a>
+                          </div>
+                        </aside>
+
+                        {/* Dropdown Menu */}
+                        <div className="space-y-2">
+                          <label className="text-xs font-bold block">Dropdown Menu List</label>
+                          <div className="theme-dropdown-menu w-full">
+                            <div className="theme-dropdown-item">
+                              <span>User Profile</span>
+                              <User className="w-3.5 h-3.5" />
+                            </div>
+                            <div className="theme-dropdown-item">
+                              <span>Workspace Options</span>
+                              <ChevronDown className="w-3.5 h-3.5" />
+                            </div>
+                            <div className="theme-dropdown-item">
+                              <span>Log Out</span>
+                              <X className="w-3.5 h-3.5 text-rose-500" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* SECTION D: FORMS, TOGGLES & AVATARS */}
+                    <div className="space-y-4">
+                      <div className="text-xs font-mono font-bold uppercase tracking-wider opacity-70">
+                        4. Form Inputs, Toggles & Avatars
+                      </div>
+
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="space-y-3">
+                          <label className="theme-label">Form Text Input</label>
+                          <input className="theme-input text-xs" placeholder="Enter email address..." />
+                          
+                          <label className="theme-label">Select Options List</label>
+                          <select className="theme-select text-xs">
+                            <option>Option 1: React Framework</option>
+                            <option>Option 2: Vue.js Framework</option>
+                            <option>Option 3: Svelte Framework</option>
+                          </select>
+                        </div>
+
+                        <div className="space-y-3">
+                          <label className="theme-label">Toggle Switch</label>
+                          <div
+                            onClick={() => setSwitchActive(!switchActive)}
+                            className={`theme-switch ${switchActive ? 'theme-switch-active' : ''}`}
+                          >
+                            <div className="theme-switch-slider" />
+                            <span className="text-xs font-bold">{switchActive ? 'Active' : 'Disabled'}</span>
+                          </div>
+
+                          <label className="theme-label">Avatar Stack Group</label>
+                          <div className="theme-avatar-group">
+                            <div className="theme-avatar">AK</div>
+                            <div className="theme-avatar bg-purple-600">JD</div>
+                            <div className="theme-avatar bg-emerald-600">MR</div>
+                            <div className="theme-avatar bg-amber-600">+5</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* SECTION E: ALERTS, TOASTS, SPINNER & PROGRESS */}
+                    <div className="space-y-4">
+                      <div className="text-xs font-mono font-bold uppercase tracking-wider opacity-70">
+                        5. Alerts, Toasts, Spinner & Progress
+                      </div>
+
+                      <div className="space-y-3">
+                        <div className="theme-alert theme-alert-success">
+                          <CheckSquare className="w-4 h-4 text-emerald-600" />
+                          <span>Success Alert: Operation completed with 100% accuracy.</span>
+                        </div>
+
+                        <div className="theme-alert theme-alert-warning">
+                          <AlertTriangle className="w-4 h-4 text-amber-500" />
+                          <span>Warning Alert: Please verify your domain DNS records.</span>
+                        </div>
+
+                        <div className="flex flex-wrap items-center justify-between gap-4 p-3 theme-card">
+                          <div className="flex items-center gap-3">
+                            <span className="theme-spinner" />
+                            <span className="text-xs font-bold">Processing request...</span>
+                          </div>
+                          <div className="w-36">
+                            <div className="theme-progress">
+                              <div className="theme-progress-bar" style={{ width: '75%' }} />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* SECTION F: DATA TABLE, STEPPER & TIMELINE */}
+                    <div className="space-y-4">
+                      <div className="text-xs font-mono font-bold uppercase tracking-wider opacity-70">
+                        6. Data Table & Multi-step Stepper
+                      </div>
+
+                      {/* Stepper */}
+                      <div className="theme-stepper py-2">
+                        <div className="theme-step theme-step-active">
+                          <div className="theme-step-icon">1</div>
+                          <span className="text-[10px] font-bold">Account</span>
+                        </div>
+                        <div className="theme-step theme-step-active">
+                          <div className="theme-step-icon">2</div>
+                          <span className="text-[10px] font-bold">Billing</span>
+                        </div>
+                        <div className="theme-step">
+                          <div className="theme-step-icon">3</div>
+                          <span className="text-[10px] font-bold">Deploy</span>
+                        </div>
+                      </div>
+
+                      {/* Data Table */}
+                      <table className="theme-table">
+                        <thead>
+                          <tr>
+                            <th>Theme ID</th>
+                            <th>Category</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td className="font-bold">agentic</td>
+                            <td>AI Assistant</td>
+                            <td><span className="theme-badge text-[9px]">ACTIVE</span></td>
+                          </tr>
+                          <tr>
+                            <td className="font-bold">cyberpunk</td>
+                            <td>Retro Gaming</td>
+                            <td><span className="theme-badge text-[9px]">ACTIVE</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    {/* SECTION G: FOOTER */}
+                    <div className="space-y-4 pt-2">
+                      <div className="text-xs font-mono font-bold uppercase tracking-wider opacity-70">
+                        7. Multi-column Footer
+                      </div>
+                      <footer className="theme-footer">
+                        <div className="flex flex-wrap justify-between items-center gap-4">
+                          <div className="font-black text-sm">{theme.name} Footer Component</div>
+                          <div className="flex gap-3 text-xs">
+                            <a className="theme-footer-link">Privacy</a>
+                            <a className="theme-footer-link">Terms</a>
+                            <a className="theme-footer-link">Docs</a>
+                          </div>
+                        </div>
+                      </footer>
+                    </div>
+                  </div>
+                )}
+
+                {/* 2. Full Landing Page Preview */}
                 {activeTab === 'card' && (
                   <div className="theme-card space-y-5 p-5 md:p-7 text-left">
                     <div className="flex items-center justify-between border-b pb-3 border-current/10">
@@ -362,7 +598,7 @@ module.exports = {
                   </div>
                 )}
 
-                {/* 2. Sidebar Navigation Component Showcase */}
+                {/* 3. Sidebar Navigation Component Showcase */}
                 {activeTab === 'sidebar' && (
                   <div className="flex flex-col md:flex-row gap-6 p-2">
                     <aside className="theme-sidebar shadow-lg">
@@ -439,7 +675,7 @@ module.exports = {
                   </div>
                 )}
 
-                {/* 3. Menus, Dropdown List & Select Showcase */}
+                {/* 4. Menus, Dropdown List & Select Showcase */}
                 {activeTab === 'dropdown' && (
                   <div className="space-y-6 p-2 text-left">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -504,114 +740,7 @@ module.exports = {
                           <option>Fintech Dashboard</option>
                           <option>AI Assistant Chat</option>
                         </select>
-
-                        <label className="text-xs font-extrabold uppercase tracking-wider opacity-70 block pt-2">
-                          Multi-Option Checklist
-                        </label>
-                        <div className="space-y-2">
-                          {['Enable Dark Mode Auto Sync', 'Enable Real-time Webhooks', 'Receive Monthly Usage Reports'].map((opt, i) => (
-                            <label key={i} className="flex items-center gap-2.5 text-xs font-semibold cursor-pointer">
-                              <input type="checkbox" defaultChecked={i < 2} className="accent-indigo-600 w-4 h-4 rounded" />
-                              <span>{opt}</span>
-                            </label>
-                          ))}
-                        </div>
                       </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* 4. Footer Component Showcase */}
-                {activeTab === 'footer' && (
-                  <div className="space-y-4 p-2 text-left">
-                    <footer className="theme-footer">
-                      <div className="theme-footer-grid">
-                        <div className="space-y-2">
-                          <div className="font-black text-lg">{theme.name} UI</div>
-                          <p className="text-xs opacity-75 leading-relaxed">
-                            Crafted with high-contrast color palettes and zero-runtime CSS variables for web applications.
-                          </p>
-                        </div>
-
-                        <div>
-                          <div className="theme-footer-title">Products</div>
-                          <ul className="theme-footer-links">
-                            <li><a href="#" className="theme-footer-link">UI Component Vault</a></li>
-                            <li><a href="#" className="theme-footer-link">Theme Studio</a></li>
-                            <li><a href="#" className="theme-footer-link">Tailwind Converter</a></li>
-                          </ul>
-                        </div>
-
-                        <div>
-                          <div className="theme-footer-title">Resources</div>
-                          <ul className="theme-footer-links">
-                            <li><a href="#" className="theme-footer-link">Documentation</a></li>
-                            <li><a href="#" className="theme-footer-link">GitHub Repo</a></li>
-                            <li><a href="#" className="theme-footer-link">NPM Package</a></li>
-                          </ul>
-                        </div>
-                      </div>
-
-                      <div className="theme-footer-bottom">
-                        <div>© 2026 AuraCSS Inc. All rights reserved.</div>
-                        <div className="flex gap-4">
-                          <a href="#" className="theme-footer-link">Privacy Policy</a>
-                          <a href="#" className="theme-footer-link">Terms of Service</a>
-                        </div>
-                      </div>
-                    </footer>
-                  </div>
-                )}
-
-                {/* 5. Pricing Cards Showcase */}
-                {activeTab === 'pricing' && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-2 text-left">
-                    <div className="theme-pricing-card">
-                      <span className="theme-badge text-[10px] w-fit">STARTER PLAN</span>
-                      <div className="theme-pricing-price">$19<span className="text-xs font-normal opacity-70"> / mo</span></div>
-                      <p className="text-xs opacity-80 mb-4">Ideal for indie developers building fast prototypes.</p>
-                      <button className="theme-btn theme-btn-outline text-xs py-2">Get Started</button>
-                    </div>
-
-                    <div className="theme-pricing-card theme-pricing-popular">
-                      <span className="theme-badge text-[10px] w-fit">MOST POPULAR</span>
-                      <div className="theme-pricing-price">$49<span className="text-xs font-normal opacity-70"> / mo</span></div>
-                      <p className="text-xs opacity-80 mb-4">For growing production teams requiring unlimited themes.</p>
-                      <button className="theme-btn text-xs py-2">Upgrade to Pro</button>
-                    </div>
-                  </div>
-                )}
-
-                {/* 6. Forms, Inputs & Toggles Showcase */}
-                {activeTab === 'forms' && (
-                  <div className="space-y-5 p-2 text-left">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="theme-card p-4 space-y-3">
-                        <label className="text-xs font-bold block">Interactive Toggle Switch</label>
-                        <div
-                          onClick={() => setSwitchActive(!switchActive)}
-                          className={`theme-switch ${switchActive ? 'theme-switch-active' : ''}`}
-                        >
-                          <div className="theme-switch-slider" />
-                          <span className="text-xs font-bold">{switchActive ? 'Notifications Enabled' : 'Disabled'}</span>
-                        </div>
-                      </div>
-
-                      <div className="theme-card p-4 space-y-3">
-                        <label className="text-xs font-bold block">Avatar Stack & Badge</label>
-                        <div className="theme-avatar-group">
-                          <div className="theme-avatar">AK</div>
-                          <div className="theme-avatar bg-indigo-600">JD</div>
-                          <div className="theme-avatar bg-purple-600">MR</div>
-                          <div className="theme-avatar bg-emerald-600">+8</div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="theme-dropzone">
-                      <UploadCloud className="w-8 h-8 text-indigo-500 mx-auto mb-2" />
-                      <div className="text-xs font-bold">Drag & drop files or click to upload assets</div>
-                      <div className="text-[10px] opacity-60 mt-1">Supports PNG, SVG, JPG or JSON up to 10MB</div>
                     </div>
                   </div>
                 )}
