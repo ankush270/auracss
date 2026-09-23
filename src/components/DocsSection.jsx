@@ -5,21 +5,30 @@ export default function DocsSection({ appMode }) {
   const isLight = appMode === 'light';
 
   const componentList = [
-    { class: '.theme-card', desc: 'Main surface container box with adaptive background, border & radius' },
-    { class: '.theme-btn', desc: 'Primary action button with hover glow and transform transition' },
-    { class: '.theme-btn-secondary', desc: 'Secondary action button styled in theme accent' },
-    { class: '.theme-btn-outline', desc: 'Transparent outline button with themed border' },
-    { class: '.theme-btn-ghost', desc: 'Subtle ghost button for secondary toolbar actions' },
-    { class: '.theme-input', desc: 'Form text input with themed focus ring & border' },
-    { class: '.theme-select', desc: 'Custom select dropdown styled for active theme' },
-    { class: '.theme-textarea', desc: 'Multi-line form text area input' },
-    { class: '.theme-badge', desc: 'Pill badge tag for categories & status labels' },
-    { class: '.theme-pill', desc: 'Rounded indicator pill tag' },
-    { class: '.theme-stat', desc: 'Analytics stat card widget container' },
-    { class: '.theme-alert', desc: 'Callout notification alert banner' },
-    { class: '.theme-table', desc: 'Data table with themed header & row hover' },
-    { class: '.theme-nav', desc: 'Navigation header bar component' },
-    { class: '.theme-progress', desc: 'Progress bar container & indicator' },
+    { class: '.theme-sidebar', desc: 'Complete navigation sidebar layout with headers, active items, badges & profile footers', tag: 'Navigation' },
+    { class: '.theme-footer', desc: 'Multi-column responsive website footer with section links & copyright row', tag: 'Layout' },
+    { class: '.theme-hero', desc: 'Full-width hero section container with prominent display title & CTA container', tag: 'Layout' },
+    { class: '.theme-pricing-card', desc: 'Product pricing plan card with popular badge highlight & feature list', tag: 'E-Commerce' },
+    { class: '.theme-card', desc: 'Main surface container box with adaptive background, border & radius', tag: 'Surfaces' },
+    { class: '.theme-btn', desc: 'Primary action button with hover glow, transitions & state transforms', tag: 'Actions' },
+    { class: '.theme-input', desc: 'Form text input with theme focus ring, custom border & typography', tag: 'Forms' },
+    { class: '.theme-select', desc: 'Custom select dropdown styled for active theme design system', tag: 'Forms' },
+    { class: '.theme-switch', desc: 'Interactive toggle switch control with animated slider track', tag: 'Forms' },
+    { class: '.theme-dropzone', desc: 'File upload drag-and-drop area with dashed themed borders', tag: 'Forms' },
+    { class: '.theme-badge', desc: 'Pill badge tag for categories, status indicators & notification counts', tag: 'Data' },
+    { class: '.theme-avatar', desc: 'User profile avatar circle with sizes (sm, lg) & avatar stack groups', tag: 'Data' },
+    { class: '.theme-stat', desc: 'Analytics stat card widget container with metric label & large value', tag: 'Data' },
+    { class: '.theme-alert', desc: 'Callout alert notification banner with success, warning & error borders', tag: 'Feedback' },
+    { class: '.theme-toast', desc: 'Floating notification toast card with box shadows & close action', tag: 'Feedback' },
+    { class: '.theme-table', desc: 'Data table with themed headers, row hover states & borders', tag: 'Data' },
+    { class: '.theme-accordion', desc: 'Collapsible accordion component with header bar & expand content', tag: 'Navigation' },
+    { class: '.theme-breadcrumb', desc: 'Breadcrumbs navigation trail with separators', tag: 'Navigation' },
+    { class: '.theme-pagination', desc: 'Page numbers pagination controls with active state highlights', tag: 'Navigation' },
+    { class: '.theme-stepper', desc: 'Multi-step process indicator with active & completed step dots', tag: 'Navigation' },
+    { class: '.theme-timeline', desc: 'Vertical event timeline list with themed indicator dots', tag: 'Data' },
+    { class: '.theme-modal-content', desc: 'Dialog modal window box with card headers, body & footer actions', tag: 'Overlays' },
+    { class: '.theme-dropdown-menu', desc: 'Floating dropdown popup menu with hover items & dividers', tag: 'Overlays' },
+    { class: '.theme-nav', desc: 'Top navigation header bar with brand logo & quick action controls', tag: 'Navigation' },
   ];
 
   return (
@@ -80,13 +89,13 @@ export default function DocsSection({ appMode }) {
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 bg-indigo-50 border border-indigo-200 text-indigo-700 px-3.5 py-1 rounded-full text-xs font-bold mb-3">
             <Layers className="w-3.5 h-3.5 text-indigo-600" />
-            <span>15+ Ready-to-Use UI Component Classes</span>
+            <span>24+ Ready-to-Use UI Component Classes</span>
           </div>
           <h2 className={`text-3xl font-black tracking-tight mb-2 ${isLight ? 'text-slate-900' : 'text-white'}`}>
             Available Semantic Components
           </h2>
           <p className={`text-sm ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>
-            Every theme automatically styles these 15 universal semantic CSS classes out of the box.
+            Every theme automatically styles these 24+ universal semantic CSS classes out of the box.
           </p>
         </div>
 
@@ -98,9 +107,14 @@ export default function DocsSection({ appMode }) {
                 isLight ? 'bg-white border-slate-200 shadow-sm' : 'bg-[#131b2e] border-white/10'
               }`}
             >
-              <code className="text-xs font-mono font-bold text-indigo-600 bg-indigo-50 border border-indigo-200 px-2.5 py-1 rounded-md inline-block mb-2">
-                {comp.class}
-              </code>
+              <div className="flex items-center justify-between mb-2">
+                <code className="text-xs font-mono font-bold text-indigo-600 bg-indigo-50 border border-indigo-200 px-2.5 py-1 rounded-md inline-block">
+                  {comp.class}
+                </code>
+                <span className="text-[10px] font-semibold text-slate-500 bg-slate-100 border border-slate-200 px-2 py-0.5 rounded-full uppercase">
+                  {comp.tag}
+                </span>
+              </div>
               <p className={`text-xs leading-relaxed ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>
                 {comp.desc}
               </p>

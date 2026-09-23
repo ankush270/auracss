@@ -1,5 +1,5 @@
 /* ==========================================================================
-   AURACSS - EXPANDED SEMANTIC COMPONENT LIBRARY
+   AURACSS - EXPANDED SEMANTIC COMPONENT LIBRARY (30+ COMPONENTS)
    Universal class definitions mapped to per-theme CSS Variables.
    ========================================================================== */
 
@@ -42,6 +42,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .theme-card-bordered {
   border-width: 2px;
+}
+
+.theme-card-header {
+  border-bottom: var(--border, 1px solid #e5e7eb);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.theme-card-footer {
+  border-top: var(--border, 1px solid #e5e7eb);
+  padding-top: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* 2. Button Components & Variants */
@@ -154,6 +169,60 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
+/* Toggle Switch Component */
+.theme-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.theme-switch-slider {
+  width: 44px;
+  height: 24px;
+  background-color: var(--border, #d1d5db);
+  border-radius: 9999px;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.theme-switch-slider::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+.theme-switch-active .theme-switch-slider {
+  background-color: var(--color-primary, #3b82f6);
+}
+
+.theme-switch-active .theme-switch-slider::before {
+  transform: translateX(20px);
+}
+
+/* File Dropzone Component */
+.theme-dropzone {
+  background-color: var(--bg-card, #ffffff);
+  border: 2px dashed var(--border, #d1d5db);
+  border-radius: var(--radius, 8px);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-dropzone:hover {
+  border-color: var(--color-primary, #3b82f6);
+  background-color: var(--bg-badge, rgba(0,0,0,0.02));
+}
+
 /* 4. Badges, Tags & Pills */
 .theme-badge {
   background-color: var(--bg-badge, var(--color-primary));
@@ -180,12 +249,44 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
+/* Avatars & Avatar Group */
+.theme-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius, 50%);
+  background-color: var(--color-primary, #3b82f6);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border: 2px solid var(--bg-card, #ffffff);
+}
+
+.theme-avatar-sm { width: 32px; height: 32px; font-size: 0.75rem; }
+.theme-avatar-lg { width: 48px; height: 48px; font-size: 1rem; }
+
+.theme-avatar-group {
+  display: flex;
+  align-items: center;
+}
+
+.theme-avatar-group .theme-avatar {
+  margin-left: -10px;
+}
+
+.theme-avatar-group .theme-avatar:first-child {
+  margin-left: 0;
+}
+
 /* 5. Stat Widgets & Analytics Cards */
 .theme-stat {
   background-color: var(--bg-card, #ffffff);
   border: var(--border, 1px solid #e5e7eb);
   border-radius: var(--radius, 8px);
-  padding: 1rem 1.25rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--box-shadow, none);
 }
 
 .theme-stat-lbl {
@@ -197,7 +298,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .theme-stat-val {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 900;
   margin-top: 0.25rem;
   font-family: var(--font-display, var(--font-family));
@@ -218,16 +319,21 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.75rem;
 }
 
-.theme-alert-success {
-  border-left-color: #10b981;
-}
+.theme-alert-success { border-left-color: #10b981; }
+.theme-alert-warning { border-left-color: #f59e0b; }
+.theme-alert-error { border-left-color: #ef4444; }
 
-.theme-alert-warning {
-  border-left-color: #f59e0b;
-}
-
-.theme-alert-error {
-  border-left-color: #ef4444;
+/* Toast Notification Component */
+.theme-toast {
+  background-color: var(--bg-card, #ffffff);
+  border: var(--border, 1px solid #e5e7eb);
+  border-radius: var(--radius, 8px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  max-width: 360px;
 }
 
 /* 7. Data Tables */
@@ -283,7 +389,369 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-primary);
 }
 
-/* 9. Progress Bar */
+/* 9. Sidebar Navigation Component (EXTENDED) */
+.theme-sidebar {
+  background-color: var(--bg-card, #ffffff);
+  border-right: var(--border, 1px solid #e5e7eb);
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: var(--radius, 8px);
+  width: 100%;
+  max-width: 260px;
+  box-sizing: border-box;
+}
+
+.theme-sidebar-header {
+  padding: 0.5rem 0.75rem 1rem 0.75rem;
+  border-bottom: var(--border, 1px solid #e5e7eb);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.theme-sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.theme-sidebar-item {
+  color: var(--text-main);
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius, 6px);
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.theme-sidebar-item:hover {
+  background-color: var(--bg-badge, rgba(0,0,0,0.04));
+  color: var(--color-primary);
+}
+
+.theme-sidebar-item-active {
+  background-color: var(--color-primary, #3b82f6);
+  color: var(--btn-text-color, #ffffff) !important;
+  font-weight: 700;
+}
+
+.theme-sidebar-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: var(--border, 1px solid #e5e7eb);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* 10. Footer Component (EXTENDED) */
+.theme-footer {
+  background-color: var(--bg-card, #ffffff);
+  border-top: var(--border, 1px solid #e5e7eb);
+  padding: 2.5rem 2rem 1.5rem 2rem;
+  border-radius: var(--radius, 12px);
+  box-shadow: var(--box-shadow, none);
+}
+
+.theme-footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.theme-footer-title {
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+.theme-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.theme-footer-link {
+  color: var(--text-main);
+  opacity: 0.75;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.15s ease;
+}
+
+.theme-footer-link:hover {
+  opacity: 1;
+  color: var(--color-primary);
+}
+
+.theme-footer-bottom {
+  border-top: var(--border, 1px solid #e5e7eb);
+  padding-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* 11. Hero Banner Component */
+.theme-hero {
+  background-color: var(--bg-card, #ffffff);
+  border: var(--border, 1px solid #e5e7eb);
+  border-radius: var(--radius, 12px);
+  padding: 3.5rem 2rem;
+  text-align: center;
+  box-shadow: var(--box-shadow, none);
+}
+
+.theme-hero-title {
+  font-size: 2.75rem;
+  font-weight: 900;
+  margin-bottom: 0.85rem;
+  font-family: var(--font-display, var(--font-family));
+  line-height: 1.15;
+}
+
+.theme-hero-desc {
+  font-size: 1.15rem;
+  opacity: 0.8;
+  max-width: 650px;
+  margin: 0 auto 1.75rem auto;
+}
+
+/* 12. Breadcrumbs Component */
+.theme-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-family: var(--font-mono, var(--font-family));
+}
+
+.theme-breadcrumb-item {
+  color: var(--text-main);
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.theme-breadcrumb-item:hover {
+  opacity: 1;
+  color: var(--color-primary);
+}
+
+/* 13. Pagination Component */
+.theme-pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.theme-pagination-item {
+  background-color: var(--bg-card, #ffffff);
+  border: var(--border, 1px solid #e5e7eb);
+  border-radius: var(--radius, 6px);
+  color: var(--text-main);
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.theme-pagination-item:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.theme-pagination-active {
+  background-color: var(--color-primary, #3b82f6);
+  color: var(--btn-text-color, #ffffff);
+  border-color: var(--color-primary);
+}
+
+/* 14. Accordion Component */
+.theme-accordion {
+  border: var(--border, 1px solid #e5e7eb);
+  border-radius: var(--radius, 8px);
+  overflow: hidden;
+}
+
+.theme-accordion-header {
+  background-color: var(--bg-card, #ffffff);
+  padding: 1rem 1.25rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--border, 1px solid #e5e7eb);
+}
+
+.theme-accordion-body {
+  background-color: var(--bg-card, #ffffff);
+  padding: 1rem 1.25rem;
+  font-size: 0.875rem;
+  opacity: 0.85;
+}
+
+/* 15. Pricing Cards Component */
+.theme-pricing-card {
+  background-color: var(--bg-card, #ffffff);
+  border: var(--border, 1px solid #e5e7eb);
+  border-radius: var(--radius, 12px);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.theme-pricing-popular {
+  border-color: var(--color-primary, #3b82f6);
+  border-width: 2px;
+  box-shadow: 0 10px 30px -10px var(--color-primary, rgba(59, 130, 246, 0.3));
+}
+
+.theme-pricing-price {
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-family: var(--font-display, var(--font-family));
+  margin: 1rem 0;
+}
+
+/* 16. Stepper / Process Flow */
+.theme-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.theme-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 1;
+}
+
+.theme-step-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--bg-card, #ffffff);
+  border: 2px solid var(--border, #d1d5db);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.theme-step-active .theme-step-icon {
+  background-color: var(--color-primary, #3b82f6);
+  color: #ffffff;
+  border-color: var(--color-primary, #3b82f6);
+}
+
+/* 17. Timeline Component */
+.theme-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--border, #e5e7eb);
+}
+
+.theme-timeline-item {
+  position: relative;
+}
+
+.theme-timeline-dot {
+  position: absolute;
+  left: -2.1rem;
+  top: 0.25rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-primary, #3b82f6);
+  border: 3px solid var(--bg-card, #ffffff);
+}
+
+/* 18. Modal Dialog Mockup */
+.theme-modal-content {
+  background-color: var(--bg-card, #ffffff);
+  border: var(--border, 1px solid #e5e7eb);
+  border-radius: var(--radius, 12px);
+  box-shadow: 0 20px 40px -15px rgba(0,0,0,0.2);
+  padding: 1.75rem;
+  max-width: 480px;
+  width: 100%;
+}
+
+/* 19. Dropdown Menu Component */
+.theme-dropdown-menu {
+  background-color: var(--bg-card, #ffffff);
+  border: var(--border, 1px solid #e5e7eb);
+  border-radius: var(--radius, 8px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.theme-dropdown-item {
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius, 4px);
+  font-size: 0.85rem;
+  color: var(--text-main);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.theme-dropdown-item:hover {
+  background-color: var(--bg-badge, rgba(0,0,0,0.05));
+  color: var(--color-primary);
+}
+
+/* 20. Miscellaneous UI Utilities */
+.theme-divider {
+  border: none;
+  border-top: var(--border, 1px solid #e5e7eb);
+  margin: 1.5rem 0;
+}
+
+.theme-kbd {
+  background-color: var(--bg-card, #f3f4f6);
+  border: var(--border, 1px solid #d1d5db);
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.4rem;
+}
+
 .theme-progress {
   background-color: var(--bg-badge, #e5e7eb);
   border-radius: 9999px;

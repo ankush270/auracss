@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
-import { ArrowLeft, Globe, Code2, Sliders, Layout, Heart, Copy, Download, Sparkles, Check, Type, Layers, Eye } from 'lucide-react';
+import { ArrowLeft, Globe, Code2, Sliders, Layout, Heart, Copy, Download, Sparkles, Check, Type, Layers, Eye, Menu, ChevronDown, CheckSquare, User, Bell, Search, Settings, HelpCircle, Package, Folder, Plus, X, UploadCloud, CreditCard, Shield, Zap } from 'lucide-react';
 
 export default function ThemeDetailPage({ theme, onBack, onApplyGlobal, showToast, appMode, isFavorite, onToggleFavorite }) {
   const [activeTab, setActiveTab] = useState('card');
   const [snippetFormat, setSnippetFormat] = useState('react');
   const [copiedType, setCopiedType] = useState(null);
   const [fontSampleText, setFontSampleText] = useState('The quick brown fox jumps over the lazy dog.');
+  
+  // Interactive UI component state toggles inside playground
+  const [switchActive, setSwitchActive] = useState(true);
+  const [dropdownOpen, setDropdownOpen] = useState(true);
+  const [selectedOption, setSelectedOption] = useState('Option 1: Pro Subscription');
+  const [accordionOpen, setAccordionOpen] = useState(0);
 
   // Live Customizer States
   const [customPrimary, setCustomPrimary] = useState('');
@@ -21,10 +27,23 @@ export default function ThemeDetailPage({ theme, onBack, onApplyGlobal, showToas
 
   const htmlSnippet = `<html data-theme="${theme.id}">
   <body>
-    <div className="theme-card">
-      <span className="theme-badge">${theme.name} Active</span>
-      <button className="theme-btn">Action Button</button>
-      <input className="theme-input" placeholder="Type here..." />
+    <!-- Sidebar Component -->
+    <aside className="theme-sidebar">
+      <div className="theme-sidebar-header">
+        <strong>AuraApp</strong>
+        <span className="theme-badge">Pro</span>
+      </div>
+      <nav className="theme-sidebar-menu">
+        <a className="theme-sidebar-item theme-sidebar-item-active">Dashboard</a>
+        <a className="theme-sidebar-item">Projects</a>
+      </nav>
+    </aside>
+
+    <!-- Dropdown Menu Component -->
+    <div className="theme-dropdown-menu">
+      <div className="theme-dropdown-item">Account Settings</div>
+      <div className="theme-dropdown-item">Billing & Plans</div>
+      <div className="theme-dropdown-item">Log Out</div>
     </div>
   </body>
 </html>`;
@@ -34,9 +53,19 @@ export default function ThemeDetailPage({ theme, onBack, onApplyGlobal, showToas
 export default function MyComponent() {
   return (
     <div data-theme="${theme.id}">
-      <div className="theme-card">
-        <span className="theme-badge">${theme.name}</span>
-        <button className="theme-btn">Primary Action</button>
+      {/* Sidebar Navigation */}
+      <aside className="theme-sidebar">
+        <div className="theme-sidebar-header">
+          <span>${theme.name} App</span>
+        </div>
+        <a className="theme-sidebar-item theme-sidebar-item-active">Overview</a>
+        <a className="theme-sidebar-item">Settings</a>
+      </aside>
+
+      {/* Dropdown Menu */}
+      <div className="theme-dropdown-menu">
+        <div className="theme-dropdown-item">Profile</div>
+        <div className="theme-dropdown-item">Security</div>
       </div>
     </div>
   );
@@ -178,7 +207,7 @@ module.exports = {
                 {theme.name} Design System
               </h1>
               <p className={`text-sm md:text-base max-w-3xl leading-relaxed ${isLight ? 'text-slate-600' : 'text-slate-300'}`}>
-                {theme.desc} Comprehensive design tokens, CSS variables, typography specs, and live interactive UI components.
+                {theme.desc} Full suite of semantic UI components including Sidebars, Dropdowns, Menus, Footers, Pricing Tables, Forms, and Dialogs.
               </p>
             </div>
 
@@ -205,7 +234,7 @@ module.exports = {
             <div className={`border rounded-2xl p-6 ${
               isLight ? 'bg-white border-slate-200 shadow-sm' : 'bg-[#131b2e] border-white/10'
             }`}>
-              {/* Studio Tabs Header */}
+              {/* Studio Component Category Tabs */}
               <div className="flex flex-wrap items-center justify-between gap-3 border-b pb-4 mb-6 border-current/10">
                 <div className="flex items-center gap-2">
                   <Eye className="w-5 h-5 text-indigo-600" />
@@ -217,36 +246,63 @@ module.exports = {
                 <div className="flex flex-wrap gap-1.5">
                   <button
                     onClick={() => setActiveTab('card')}
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                       activeTab === 'card'
                         ? 'bg-indigo-600 text-white shadow'
                         : isLight ? 'bg-slate-100 text-slate-700 hover:bg-slate-200' : 'bg-white/5 text-slate-400 hover:text-white'
                     }`}
                   >
-                    <Layout className="w-3.5 h-3.5" />
-                    Full Landing Page
+                    Landing Page
                   </button>
                   <button
-                    onClick={() => setActiveTab('buttons')}
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                      activeTab === 'buttons'
+                    onClick={() => setActiveTab('sidebar')}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                      activeTab === 'sidebar'
                         ? 'bg-indigo-600 text-white shadow'
                         : isLight ? 'bg-slate-100 text-slate-700 hover:bg-slate-200' : 'bg-white/5 text-slate-400 hover:text-white'
                     }`}
                   >
-                    <Code2 className="w-3.5 h-3.5" />
-                    Buttons & Inputs
+                    Sidebar Nav
                   </button>
                   <button
-                    onClick={() => setActiveTab('stats')}
-                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                      activeTab === 'stats'
+                    onClick={() => setActiveTab('dropdown')}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                      activeTab === 'dropdown'
                         ? 'bg-indigo-600 text-white shadow'
                         : isLight ? 'bg-slate-100 text-slate-700 hover:bg-slate-200' : 'bg-white/5 text-slate-400 hover:text-white'
                     }`}
                   >
-                    <Sliders className="w-3.5 h-3.5" />
-                    Stats & Widgets
+                    Menus & Dropdowns
+                  </button>
+                  <button
+                    onClick={() => setActiveTab('footer')}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                      activeTab === 'footer'
+                        ? 'bg-indigo-600 text-white shadow'
+                        : isLight ? 'bg-slate-100 text-slate-700 hover:bg-slate-200' : 'bg-white/5 text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    Footer Section
+                  </button>
+                  <button
+                    onClick={() => setActiveTab('pricing')}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                      activeTab === 'pricing'
+                        ? 'bg-indigo-600 text-white shadow'
+                        : isLight ? 'bg-slate-100 text-slate-700 hover:bg-slate-200' : 'bg-white/5 text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    Pricing Cards
+                  </button>
+                  <button
+                    onClick={() => setActiveTab('forms')}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                      activeTab === 'forms'
+                        ? 'bg-indigo-600 text-white shadow'
+                        : isLight ? 'bg-slate-100 text-slate-700 hover:bg-slate-200' : 'bg-white/5 text-slate-400 hover:text-white'
+                    }`}
+                  >
+                    Inputs & Toggles
                   </button>
                 </div>
               </div>
@@ -255,11 +311,11 @@ module.exports = {
               <div
                 data-theme={theme.id}
                 style={customStyleObj}
-                className="p-4 sm:p-6 rounded-2xl border border-slate-200/60 shadow-md transition-all min-h-[360px]"
+                className="p-4 sm:p-6 rounded-2xl border border-slate-200/60 shadow-md transition-all min-h-[420px] overflow-hidden"
               >
+                {/* 1. Full Landing Page Preview */}
                 {activeTab === 'card' && (
                   <div className="theme-card space-y-5 p-5 md:p-7 text-left">
-                    {/* Full Top Navbar */}
                     <div className="flex items-center justify-between border-b pb-3 border-current/10">
                       <div className="flex items-center gap-2 font-black text-sm tracking-tight">
                         <span className="w-3 h-3 rounded-full inline-block" style={{ backgroundColor: theme.primary }} />
@@ -271,7 +327,6 @@ module.exports = {
                       </div>
                     </div>
 
-                    {/* Hero Headline & Subtitle */}
                     <div className="py-2 space-y-2">
                       <span className="text-xs font-mono opacity-60 block uppercase tracking-wider">
                         data-theme="{theme.id}"
@@ -284,57 +339,279 @@ module.exports = {
                       </p>
                     </div>
 
-                    {/* Search & Newsletter Form */}
                     <div className="flex flex-col sm:flex-row gap-2.5 pt-1">
                       <input className="theme-input text-xs py-2 px-3 flex-1" placeholder="Enter work email for instant access..." />
                       <button className="theme-btn text-xs py-2 px-4 whitespace-nowrap">Get Started Free</button>
                       <button className="theme-btn theme-btn-secondary text-xs py-2 px-3">Docs</button>
                     </div>
 
-                    {/* Mini Stats Bar */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2">
-                      <div className="p-3 rounded-xl border border-current/10 bg-current/5">
-                        <div className="text-[10px] opacity-60 uppercase font-mono">Total Deployments</div>
-                        <div className="text-lg font-black mt-0.5">142,900+</div>
+                      <div className="theme-stat">
+                        <div className="theme-stat-lbl">Total Deployments</div>
+                        <div className="theme-stat-val text-lg">142,900+</div>
                       </div>
-                      <div className="p-3 rounded-xl border border-current/10 bg-current/5">
-                        <div className="text-[10px] opacity-60 uppercase font-mono">Uptime SLA</div>
-                        <div className="text-lg font-black mt-0.5">99.99%</div>
+                      <div className="theme-stat">
+                        <div className="theme-stat-lbl">Uptime SLA</div>
+                        <div className="theme-stat-val text-lg">99.99%</div>
                       </div>
-                      <div className="p-3 rounded-xl border border-current/10 bg-current/5">
-                        <div className="text-[10px] opacity-60 uppercase font-mono">Satisfaction</div>
-                        <div className="text-lg font-black mt-0.5">4.95 / 5.00 ⭐</div>
+                      <div className="theme-stat">
+                        <div className="theme-stat-lbl">User Rating</div>
+                        <div className="theme-stat-val text-lg">4.95 / 5.00 ⭐</div>
                       </div>
                     </div>
                   </div>
                 )}
 
-                {activeTab === 'buttons' && (
-                  <div className="space-y-6 p-4">
-                    <h4 className="text-base font-bold opacity-90">Button Variants & Form Inputs</h4>
-                    <div className="flex flex-wrap gap-3">
-                      <button className="theme-btn">Primary Action Button</button>
-                      <button className="theme-btn theme-btn-secondary">Secondary Action</button>
-                      <button className="theme-badge">Status Badge</button>
-                    </div>
-                    <div className="space-y-3 max-w-md">
-                      <label className="text-xs opacity-70 font-semibold block">Form Text Input Field</label>
-                      <input className="theme-input text-sm" placeholder="Enter your email address..." />
+                {/* 2. Sidebar Navigation Component Showcase */}
+                {activeTab === 'sidebar' && (
+                  <div className="flex flex-col md:flex-row gap-6 p-2">
+                    <aside className="theme-sidebar shadow-lg">
+                      <div className="theme-sidebar-header">
+                        <div className="flex items-center gap-2">
+                          <Package className="w-5 h-5 text-indigo-500" />
+                          <span className="font-extrabold text-sm">{theme.name} Studio</span>
+                        </div>
+                        <span className="theme-pill">v2.4</span>
+                      </div>
+
+                      <div className="theme-sidebar-menu">
+                        <a className="theme-sidebar-item theme-sidebar-item-active">
+                          <div className="flex items-center gap-2.5">
+                            <Layout className="w-4 h-4" />
+                            <span>Dashboard</span>
+                          </div>
+                          <span className="theme-badge text-[10px]">NEW</span>
+                        </a>
+
+                        <a className="theme-sidebar-item">
+                          <div className="flex items-center gap-2.5">
+                            <Folder className="w-4 h-4" />
+                            <span>Projects</span>
+                          </div>
+                          <span className="text-xs font-mono opacity-60">12</span>
+                        </a>
+
+                        <a className="theme-sidebar-item">
+                          <div className="flex items-center gap-2.5">
+                            <Bell className="w-4 h-4" />
+                            <span>Notifications</span>
+                          </div>
+                          <span className="theme-pill text-[10px]">5</span>
+                        </a>
+
+                        <a className="theme-sidebar-item">
+                          <div className="flex items-center gap-2.5">
+                            <Settings className="w-4 h-4" />
+                            <span>Settings</span>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div className="theme-sidebar-footer">
+                        <div className="theme-avatar">AK</div>
+                        <div className="text-left overflow-hidden">
+                          <div className="text-xs font-bold leading-tight truncate">Ankush Craps</div>
+                          <div className="text-[10px] opacity-70 truncate">ankush@auracss.dev</div>
+                        </div>
+                      </div>
+                    </aside>
+
+                    {/* Sidebar Content Workspace */}
+                    <div className="flex-1 theme-card p-5 space-y-4 text-left">
+                      <div className="theme-breadcrumb">
+                        <span className="theme-breadcrumb-item">Workspace</span>
+                        <span>/</span>
+                        <span className="theme-breadcrumb-item">Design Systems</span>
+                        <span>/</span>
+                        <span className="font-bold">{theme.name} Sidebar</span>
+                      </div>
+
+                      <h3 className="text-xl font-black">{theme.name} Dashboard</h3>
+                      <p className="text-xs opacity-80 leading-relaxed">
+                        The sidebar component adapts to your theme's primary color, border-radius, and text contrast rules automatically.
+                      </p>
+
+                      <div className="theme-alert theme-alert-success">
+                        <CheckSquare className="w-4 h-4 text-emerald-600" />
+                        <span>Sidebar navigation integrated smoothly with zero extra CSS.</span>
+                      </div>
                     </div>
                   </div>
                 )}
 
-                {activeTab === 'stats' && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
-                    <div className="theme-card p-5">
-                      <div className="text-xs opacity-70 mb-1 font-semibold">Total Revenue</div>
-                      <div className="text-3xl font-black">$148,290.00</div>
-                      <span className="theme-badge text-xs mt-3 inline-block">+24.2% growth</span>
+                {/* 3. Menus, Dropdown List & Select Showcase */}
+                {activeTab === 'dropdown' && (
+                  <div className="space-y-6 p-2 text-left">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {/* Dropdown Menu Container */}
+                      <div className="theme-card p-5 space-y-3">
+                        <div className="flex items-center justify-between">
+                          <label className="text-xs font-extrabold uppercase tracking-wider opacity-70">
+                            Dropdown Menu & Options
+                          </label>
+                          <span className="theme-badge text-[10px]">Interactive</span>
+                        </div>
+
+                        {/* Trigger Button */}
+                        <button
+                          onClick={() => setDropdownOpen(!dropdownOpen)}
+                          className="theme-btn theme-btn-outline w-full justify-between text-xs py-2 px-3"
+                        >
+                          <div className="flex items-center gap-2">
+                            <User className="w-3.5 h-3.5" />
+                            <span>{selectedOption}</span>
+                          </div>
+                          <ChevronDown className="w-3.5 h-3.5" />
+                        </button>
+
+                        {/* Options Dropdown List */}
+                        {dropdownOpen && (
+                          <div className="theme-dropdown-menu w-full mt-1">
+                            <div
+                              onClick={() => { setSelectedOption('Option 1: Pro Subscription'); showToast('Selected Pro Plan'); }}
+                              className="theme-dropdown-item flex items-center justify-between"
+                            >
+                              <span>Option 1: Pro Subscription</span>
+                              {selectedOption.includes('Pro') && <Check className="w-3.5 h-3.5 text-indigo-600" />}
+                            </div>
+                            <div
+                              onClick={() => { setSelectedOption('Option 2: Enterprise Team'); showToast('Selected Enterprise'); }}
+                              className="theme-dropdown-item flex items-center justify-between"
+                            >
+                              <span>Option 2: Enterprise Team</span>
+                              {selectedOption.includes('Enterprise') && <Check className="w-3.5 h-3.5 text-indigo-600" />}
+                            </div>
+                            <div
+                              onClick={() => { setSelectedOption('Option 3: Developer Free Tier'); showToast('Selected Free Tier'); }}
+                              className="theme-dropdown-item flex items-center justify-between"
+                            >
+                              <span>Option 3: Developer Free Tier</span>
+                              {selectedOption.includes('Developer') && <Check className="w-3.5 h-3.5 text-indigo-600" />}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Select Option Dropdown List */}
+                      <div className="theme-card p-5 space-y-3">
+                        <label className="text-xs font-extrabold uppercase tracking-wider opacity-70 block">
+                          Native Select Options List
+                        </label>
+                        <select className="theme-select text-xs py-2 px-3">
+                          <option>Select Workspace Category...</option>
+                          <option>SaaS Landing Page</option>
+                          <option>Developer Tools</option>
+                          <option>Fintech Dashboard</option>
+                          <option>AI Assistant Chat</option>
+                        </select>
+
+                        <label className="text-xs font-extrabold uppercase tracking-wider opacity-70 block pt-2">
+                          Multi-Option Checklist
+                        </label>
+                        <div className="space-y-2">
+                          {['Enable Dark Mode Auto Sync', 'Enable Real-time Webhooks', 'Receive Monthly Usage Reports'].map((opt, i) => (
+                            <label key={i} className="flex items-center gap-2.5 text-xs font-semibold cursor-pointer">
+                              <input type="checkbox" defaultChecked={i < 2} className="accent-indigo-600 w-4 h-4 rounded" />
+                              <span>{opt}</span>
+                            </label>
+                          ))}
+                        </div>
+                      </div>
                     </div>
-                    <div className="theme-card p-5">
-                      <div className="text-xs opacity-70 mb-1 font-semibold">Active Customers</div>
-                      <div className="text-3xl font-black">18,450</div>
-                      <span className="theme-badge text-xs mt-3 inline-block">+12.4% new users</span>
+                  </div>
+                )}
+
+                {/* 4. Footer Component Showcase */}
+                {activeTab === 'footer' && (
+                  <div className="space-y-4 p-2 text-left">
+                    <footer className="theme-footer">
+                      <div className="theme-footer-grid">
+                        <div className="space-y-2">
+                          <div className="font-black text-lg">{theme.name} UI</div>
+                          <p className="text-xs opacity-75 leading-relaxed">
+                            Crafted with high-contrast color palettes and zero-runtime CSS variables for web applications.
+                          </p>
+                        </div>
+
+                        <div>
+                          <div className="theme-footer-title">Products</div>
+                          <ul className="theme-footer-links">
+                            <li><a href="#" className="theme-footer-link">UI Component Vault</a></li>
+                            <li><a href="#" className="theme-footer-link">Theme Studio</a></li>
+                            <li><a href="#" className="theme-footer-link">Tailwind Converter</a></li>
+                          </ul>
+                        </div>
+
+                        <div>
+                          <div className="theme-footer-title">Resources</div>
+                          <ul className="theme-footer-links">
+                            <li><a href="#" className="theme-footer-link">Documentation</a></li>
+                            <li><a href="#" className="theme-footer-link">GitHub Repo</a></li>
+                            <li><a href="#" className="theme-footer-link">NPM Package</a></li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div className="theme-footer-bottom">
+                        <div>© 2026 AuraCSS Inc. All rights reserved.</div>
+                        <div className="flex gap-4">
+                          <a href="#" className="theme-footer-link">Privacy Policy</a>
+                          <a href="#" className="theme-footer-link">Terms of Service</a>
+                        </div>
+                      </div>
+                    </footer>
+                  </div>
+                )}
+
+                {/* 5. Pricing Cards Showcase */}
+                {activeTab === 'pricing' && (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-2 text-left">
+                    <div className="theme-pricing-card">
+                      <span className="theme-badge text-[10px] w-fit">STARTER PLAN</span>
+                      <div className="theme-pricing-price">$19<span className="text-xs font-normal opacity-70"> / mo</span></div>
+                      <p className="text-xs opacity-80 mb-4">Ideal for indie developers building fast prototypes.</p>
+                      <button className="theme-btn theme-btn-outline text-xs py-2">Get Started</button>
+                    </div>
+
+                    <div className="theme-pricing-card theme-pricing-popular">
+                      <span className="theme-badge text-[10px] w-fit">MOST POPULAR</span>
+                      <div className="theme-pricing-price">$49<span className="text-xs font-normal opacity-70"> / mo</span></div>
+                      <p className="text-xs opacity-80 mb-4">For growing production teams requiring unlimited themes.</p>
+                      <button className="theme-btn text-xs py-2">Upgrade to Pro</button>
+                    </div>
+                  </div>
+                )}
+
+                {/* 6. Forms, Inputs & Toggles Showcase */}
+                {activeTab === 'forms' && (
+                  <div className="space-y-5 p-2 text-left">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="theme-card p-4 space-y-3">
+                        <label className="text-xs font-bold block">Interactive Toggle Switch</label>
+                        <div
+                          onClick={() => setSwitchActive(!switchActive)}
+                          className={`theme-switch ${switchActive ? 'theme-switch-active' : ''}`}
+                        >
+                          <div className="theme-switch-slider" />
+                          <span className="text-xs font-bold">{switchActive ? 'Notifications Enabled' : 'Disabled'}</span>
+                        </div>
+                      </div>
+
+                      <div className="theme-card p-4 space-y-3">
+                        <label className="text-xs font-bold block">Avatar Stack & Badge</label>
+                        <div className="theme-avatar-group">
+                          <div className="theme-avatar">AK</div>
+                          <div className="theme-avatar bg-indigo-600">JD</div>
+                          <div className="theme-avatar bg-purple-600">MR</div>
+                          <div className="theme-avatar bg-emerald-600">+8</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="theme-dropzone">
+                      <UploadCloud className="w-8 h-8 text-indigo-500 mx-auto mb-2" />
+                      <div className="text-xs font-bold">Drag & drop files or click to upload assets</div>
+                      <div className="text-[10px] opacity-60 mt-1">Supports PNG, SVG, JPG or JSON up to 10MB</div>
                     </div>
                   </div>
                 )}
